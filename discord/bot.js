@@ -46,6 +46,8 @@ const client = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_M
 
 client.on("ready", async () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    
+    client.user.setActivity("https://discord.gg/kVn2JRrn8b");
 
     console.log("Loading skins...");
     fetchData().then(() => console.log("Skins loaded!"));
