@@ -583,7 +583,7 @@ client.on("interactionCreate", async (interaction) => {
                 case "remove": {
                     const user = getUser(interaction.user.id);
                     if(!user) return await interaction.reply({
-                        embeds: [basicEmbed("I can't forget you if you're not registered!")],
+                        embeds: [basicEmbed("I cant remove you if you arent even registered!")],
                         ephemeral: true
                     });
 
@@ -616,7 +616,7 @@ client.on("interactionCreate", async (interaction) => {
                     break;
                 }
                 default: {
-                    await interaction.reply("Yer a wizard harry!");
+                    await interaction.reply("Failed to recognize command!");
                     break;
                 }
             }
