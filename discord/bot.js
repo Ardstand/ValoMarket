@@ -136,18 +136,8 @@ const commands = [
         }]
     },
     {
-        name: "cookies",
-        description: "Log in with your cookies. Useful if you have 2FA or if you use Google/Facebook to log in.",
-        options: [{
-            type: "STRING",
-            name: "cookies",
-            description: "Your auth.riotgames.com cookie header",
-            required: true
-        }]
-    },
-    {
         name: "remove",
-        description: "Remove and permanently delete your account from the bot"
+        description: "Permanently delete your account from the bot"
     },
     {
         name: "battlepass",
@@ -566,7 +556,7 @@ client.on("interactionCreate", async (interaction) => {
 
                     break;
                 }
-                case "cookies": {
+                /*case "cookies": {
                     await defer(interaction, true);
 
                     const cookies = interaction.options.get("cookies").value;
@@ -589,7 +579,7 @@ client.on("interactionCreate", async (interaction) => {
                     });
 
                     break;
-                }
+                }*/
                 case "remove": {
                     const user = getUser(interaction.user.id);
                     if(!user) return await interaction.reply({
