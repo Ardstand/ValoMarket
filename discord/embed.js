@@ -61,7 +61,7 @@ export const skinChosenEmbed = async (skin, channel) => {
 export const renderOffers = async (shop, interaction, valorantUser, VPemoji) => {
     if(!shop.success) return authFailureMessage(interaction, shop, "**Could not fetch your shop**, try Relogging");
 
-    const embeds = [basicEmbed(`Valorant In-Game Store of **${valorantUser.username}**`)];
+    const embeds = [basicEmbed(`Valorant In-Game Store of **${valorantUser.username}** [Ends in ending in <t:${shop.expires}:R>`)];
 
     const emojiString = emojiToString(VPemoji) || "Price:";
 
