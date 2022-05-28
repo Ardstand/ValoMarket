@@ -1,8 +1,8 @@
 {
   "formatVersion": 3,
-  "gameVersion": "34A7755183AA5ED2",
+  "gameVersion": "151C966A92256B28",
   "skins": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
     "549b06bb-4704-25ce-19d5-c9b70b10de19": {
       "uuid": "549b06bb-4704-25ce-19d5-c9b70b10de19",
       "name": "Glitchpop Odin",
@@ -37,6 +37,12 @@
       "uuid": "c59442a5-4b74-792c-d996-71a5fb340625",
       "name": "Smite Odin",
       "icon": "https://media.valorant-api.com/weaponskinlevels/c59442a5-4b74-792c-d996-71a5fb340625/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
+    "dd2acfca-4366-7ac0-c13e-1eb2f1948273": {
+      "uuid": "dd2acfca-4366-7ac0-c13e-1eb2f1948273",
+      "name": "Coalition: Cobra Odin",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/dd2acfca-4366-7ac0-c13e-1eb2f1948273/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
     "1bfea917-4262-37ba-3a76-04b937f2d0be": {
@@ -93,10 +99,22 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/a2045403-40f7-2926-f955-028b6867c79a/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
+    "433e7f5e-4aaa-940e-4003-99bc0df92c17": {
+      "uuid": "433e7f5e-4aaa-940e-4003-99bc0df92c17",
+      "name": "Endeavour Ares",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/433e7f5e-4aaa-940e-4003-99bc0df92c17/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
     "7d3c0ac4-42ce-7111-2c86-43be3d2e86a7": {
       "uuid": "7d3c0ac4-42ce-7111-2c86-43be3d2e86a7",
       "name": "Nebula Ares",
       "icon": "https://media.valorant-api.com/weaponskinlevels/7d3c0ac4-42ce-7111-2c86-43be3d2e86a7/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
+    "8e0c9fac-4d40-0a04-cf4a-4bb553952164": {
+      "uuid": "8e0c9fac-4d40-0a04-cf4a-4bb553952164",
+      "name": "Doodle Buds Ares",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/8e0c9fac-4d40-0a04-cf4a-4bb553952164/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
     "642ee168-4f9e-1f5f-be72-01b3a41ac086": {
@@ -201,6 +219,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/0ddbdf8c-43b0-e2f1-94f8-d6be9d2a2110/displayicon.png",
       "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
     },
+    "2317e839-44cd-2301-80a8-c4ac63c626ac": {
+      "uuid": "2317e839-44cd-2301-80a8-c4ac63c626ac",
+      "name": "Titanmail Ares",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/2317e839-44cd-2301-80a8-c4ac63c626ac/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
+    },
     "0f5f60f4-4c94-e4b2-ceab-e2b4e8b41784": {
       "uuid": "0f5f60f4-4c94-e4b2-ceab-e2b4e8b41784",
       "name": "Standard Ares",
@@ -219,6 +243,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/23de6607-4647-bccd-8863-3da2720e4152/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
+    "49cea67c-4552-13c2-6b4b-8ba07761504e": {
+      "uuid": "49cea67c-4552-13c2-6b4b-8ba07761504e",
+      "name": "Neptune Vandal",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/49cea67c-4552-13c2-6b4b-8ba07761504e/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
     "9ff1a0e6-4f74-0e6d-9117-de8683db4eb5": {
       "uuid": "9ff1a0e6-4f74-0e6d-9117-de8683db4eb5",
       "name": "Aristocrat Vandal",
@@ -230,6 +260,12 @@
       "name": "Gaia's Vengeance Vandal",
       "icon": "https://media.valorant-api.com/weaponskinlevels/c4422d16-4cb1-75d5-fd18-dda0bb05f46b/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
+    "44ffb8d4-4f48-9456-0463-a6bc1e6ecede": {
+      "uuid": "44ffb8d4-4f48-9456-0463-a6bc1e6ecede",
+      "name": "Endeavour Vandal",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/44ffb8d4-4f48-9456-0463-a6bc1e6ecede/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
     "9f51da57-4623-415a-6313-f49588297d0e": {
       "uuid": "9f51da57-4623-415a-6313-f49588297d0e",
@@ -290,6 +326,12 @@
       "name": "dot EXE Vandal",
       "icon": "https://media.valorant-api.com/weaponskinlevels/c9ee9a00-453d-a358-8501-3ebb7ca3765e/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
+    "e9953add-4069-d71b-447a-a8ad94fe6526": {
+      "uuid": "e9953add-4069-d71b-447a-a8ad94fe6526",
+      "name": ".SYS Vandal",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/e9953add-4069-d71b-447a-a8ad94fe6526/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
     "26eee656-4f8d-bdd3-e4fe-ae9e808a3408": {
       "uuid": "26eee656-4f8d-bdd3-e4fe-ae9e808a3408",
@@ -387,6 +429,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/8017a235-48d8-9f2a-42c2-7a865157c587/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
+    "17f044eb-4016-5f86-f4f7-1095cc292a15": {
+      "uuid": "17f044eb-4016-5f86-f4f7-1095cc292a15",
+      "name": "Titanmail Vandal",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/17f044eb-4016-5f86-f4f7-1095cc292a15/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
+    },
     "1ab72e66-4da3-33a0-164f-908113e075a4": {
       "uuid": "1ab72e66-4da3-33a0-164f-908113e075a4",
       "name": "Standard Vandal",
@@ -422,6 +470,12 @@
       "name": "Aristocrat Bulldog",
       "icon": "https://media.valorant-api.com/weaponskinlevels/3bf9d39f-46b4-ba23-e079-488d799b9416/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
+    },
+    "38dbcca0-493d-70eb-ef89-d281f33efc94": {
+      "uuid": "38dbcca0-493d-70eb-ef89-d281f33efc94",
+      "name": "Endeavour Bulldog",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/38dbcca0-493d-70eb-ef89-d281f33efc94/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
     "43854c54-4263-571c-9be6-52b6d50d3190": {
       "uuid": "43854c54-4263-571c-9be6-52b6d50d3190",
@@ -489,6 +543,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/c5711665-4126-fa98-510f-5f8c82f52911/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
+    "9db51105-45a7-d05e-6d7d-08962c65c386": {
+      "uuid": "9db51105-45a7-d05e-6d7d-08962c65c386",
+      "name": "Hue Shift Bulldog",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/9db51105-45a7-d05e-6d7d-08962c65c386/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
     "0fce64bd-42c9-1755-8c67-e3a8cdd49de7": {
       "uuid": "0fce64bd-42c9-1755-8c67-e3a8cdd49de7",
       "name": "POLYfox Bulldog",
@@ -531,6 +591,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/0edd85d1-4589-385a-e5e2-84a55ae9860d/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
+    "49a986d0-4a07-b756-331e-babe1b2839d9": {
+      "uuid": "49a986d0-4a07-b756-331e-babe1b2839d9",
+      "name": "RGX 11z Pro Phantom",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/49a986d0-4a07-b756-331e-babe1b2839d9/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
     "30423af3-42f9-d0ba-dee5-0b93704b39c8": {
       "uuid": "30423af3-42f9-d0ba-dee5-0b93704b39c8",
       "name": "VALORANT GO! Vol. 1 Phantom",
@@ -566,6 +632,12 @@
       "name": "Glitchpop Phantom",
       "icon": "https://media.valorant-api.com/weaponskinlevels/9f6e4612-433b-aea9-1683-3db7aee90848/displayicon.png",
       "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
+    "f9d54c11-4c6f-575b-5bed-3cb693f6f2ba": {
+      "uuid": "f9d54c11-4c6f-575b-5bed-3cb693f6f2ba",
+      "name": "Doodle Buds Phantom",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/f9d54c11-4c6f-575b-5bed-3cb693f6f2ba/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
     "0ff7ff25-42cf-769a-4e6d-bd833121302d": {
       "uuid": "0ff7ff25-42cf-769a-4e6d-bd833121302d",
@@ -674,6 +746,12 @@
       "name": "Oni Phantom",
       "icon": "https://media.valorant-api.com/weaponskinlevels/c00e786e-4e6f-0ef7-0ce3-32ba9918ba41/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
+    "d17aa037-40df-ce4d-1009-59a02323f002": {
+      "uuid": "d17aa037-40df-ce4d-1009-59a02323f002",
+      "name": "Hue Shift Phantom",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/d17aa037-40df-ce4d-1009-59a02323f002/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
     "24a1644c-4aa9-50cc-9ca3-4aa7be12339d": {
       "uuid": "24a1644c-4aa9-50cc-9ca3-4aa7be12339d",
@@ -825,6 +903,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/cfeb4b7a-4310-796c-db4e-fb9844823992/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
+    "fe644484-4d07-5472-9e4a-d3992f2f2ecb": {
+      "uuid": "fe644484-4d07-5472-9e4a-d3992f2f2ecb",
+      "name": "Coalition: Cobra Judge",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/fe644484-4d07-5472-9e4a-d3992f2f2ecb/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
     "3c23fdc3-4300-ec78-5123-bcb0dc456473": {
       "uuid": "3c23fdc3-4300-ec78-5123-bcb0dc456473",
       "name": "POLYfox Judge",
@@ -896,6 +980,12 @@
       "name": "Surge Bucky",
       "icon": "https://media.valorant-api.com/weaponskinlevels/1e7be2e9-418e-7f39-d879-a8912be1d3ab/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
+    "b7652717-49c0-b658-529e-6f8146ab0eca": {
+      "uuid": "b7652717-49c0-b658-529e-6f8146ab0eca",
+      "name": ".SYS Bucky",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/b7652717-49c0-b658-529e-6f8146ab0eca/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
     "f7425a39-43ca-e1fe-5b2b-56a51ed479c5": {
       "uuid": "f7425a39-43ca-e1fe-5b2b-56a51ed479c5",
@@ -985,6 +1075,12 @@
       "uuid": "b6a089dd-4616-be48-4f28-d8b2a539c0a5",
       "name": "Cavalier Bucky",
       "icon": "https://media.valorant-api.com/weaponskinlevels/b6a089dd-4616-be48-4f28-d8b2a539c0a5/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
+    },
+    "0771ccd2-40b0-54cf-37b4-c3b5cac03bdb": {
+      "uuid": "0771ccd2-40b0-54cf-37b4-c3b5cac03bdb",
+      "name": "Titanmail Bucky",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/0771ccd2-40b0-54cf-37b4-c3b5cac03bdb/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
     "2f5078c7-4381-492d-cc00-9f96966ba1ec": {
@@ -1089,6 +1185,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/4efc0af7-4623-cb2e-997c-6cbf2e5ddfb4/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
+    "337b4e6a-46d8-8359-50c0-388717617044": {
+      "uuid": "337b4e6a-46d8-8359-50c0-388717617044",
+      "name": "Coalition: Cobra Frenzy",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/337b4e6a-46d8-8359-50c0-388717617044/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
     "468505e6-46e2-af29-3974-5fbbe6bf212f": {
       "uuid": "468505e6-46e2-af29-3974-5fbbe6bf212f",
       "name": "Spitfire Frenzy",
@@ -1119,6 +1221,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/fe7ac291-4516-02d4-9101-0a990615a585/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
+    "47ee5cb6-4059-df8b-6d40-5daaa01ff49f": {
+      "uuid": "47ee5cb6-4059-df8b-6d40-5daaa01ff49f",
+      "name": "Titanmail Frenzy",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/47ee5cb6-4059-df8b-6d40-5daaa01ff49f/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
+    },
     "08e6ba32-4a6e-8680-df58-39af9c32cdac": {
       "uuid": "08e6ba32-4a6e-8680-df58-39af9c32cdac",
       "name": "Live Wire Frenzy",
@@ -1135,6 +1243,12 @@
       "uuid": "31da3ec9-4eb0-ce9f-fcbb-e09ec626e748",
       "name": "BlastX Frenzy",
       "icon": "https://media.valorant-api.com/weaponskinlevels/31da3ec9-4eb0-ce9f-fcbb-e09ec626e748/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
+    "90cd5d86-4516-918b-29af-07b116f63aa9": {
+      "uuid": "90cd5d86-4516-918b-29af-07b116f63aa9",
+      "name": "RGX 11z Pro Classic",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/90cd5d86-4516-918b-29af-07b116f63aa9/displayicon.png",
       "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
     },
     "68ee5c6c-4424-e95a-f46f-c08ec2dfeb97": {
@@ -1311,6 +1425,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/f7862f1f-4340-6e42-b1fa-0ebcdcf43456/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
+    "80073abf-4fea-b06d-f70c-bdbe6d8ce0a7": {
+      "uuid": "80073abf-4fea-b06d-f70c-bdbe6d8ce0a7",
+      "name": "Endeavour Ghost",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/80073abf-4fea-b06d-f70c-bdbe6d8ce0a7/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
     "9466088a-4ad8-cb08-ec9a-45aaba3a6acd": {
       "uuid": "9466088a-4ad8-cb08-ec9a-45aaba3a6acd",
       "name": "dot EXE Ghost",
@@ -1479,6 +1599,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/db36ee86-4aa7-249f-6745-5e9ddffa50b4/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
+    "6287a1f1-4d10-5190-86ec-659b26020e87": {
+      "uuid": "6287a1f1-4d10-5190-86ec-659b26020e87",
+      "name": ".SYS Sheriff",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/6287a1f1-4d10-5190-86ec-659b26020e87/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
+    },
     "d9fc55c6-4b92-98ac-5052-2a8b5ca4fb71": {
       "uuid": "d9fc55c6-4b92-98ac-5052-2a8b5ca4fb71",
       "name": "Protektor Sheriff",
@@ -1617,6 +1743,24 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/a07ff70b-4b4b-ee36-78f5-8ba771b278ac/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
+    "93266c2b-400f-da62-24a0-739f51d33cc1": {
+      "uuid": "93266c2b-400f-da62-24a0-739f51d33cc1",
+      "name": "Neptune Shorty",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/93266c2b-400f-da62-24a0-739f51d33cc1/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
+    "f1f9cde8-4810-86a0-1c95-4ab214d4f6b8": {
+      "uuid": "f1f9cde8-4810-86a0-1c95-4ab214d4f6b8",
+      "name": "Karabasan Shorty",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/f1f9cde8-4810-86a0-1c95-4ab214d4f6b8/displayicon.png",
+      "rarity": null
+    },
+    "deb200a8-447c-0e47-5b92-e8aeb9cd5525": {
+      "uuid": "deb200a8-447c-0e47-5b92-e8aeb9cd5525",
+      "name": "Doodle Buds Shorty",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/deb200a8-447c-0e47-5b92-e8aeb9cd5525/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
     "d0a95805-4adb-95f7-3955-339d89769bec": {
       "uuid": "d0a95805-4adb-95f7-3955-339d89769bec",
       "name": "Hivemind Shorty",
@@ -1671,6 +1815,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/6f90d1ed-4acc-d925-4a8a-60913f14d16b/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
+    "31629ef7-47ac-908e-369b-16beabc02c5b": {
+      "uuid": "31629ef7-47ac-908e-369b-16beabc02c5b",
+      "name": "Hue Shift Shorty",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/31629ef7-47ac-908e-369b-16beabc02c5b/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
     "a7f92a1c-4465-5ea3-7745-bd876117f4a7": {
       "uuid": "a7f92a1c-4465-5ea3-7745-bd876117f4a7",
       "name": "Standard Shorty",
@@ -1701,11 +1851,23 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/a88a4c80-4913-a111-0fba-878adddd381a/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
+    "2ad7a62f-4091-ecba-de21-d19edfb41086": {
+      "uuid": "2ad7a62f-4091-ecba-de21-d19edfb41086",
+      "name": "RGX 11z Pro Operator",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/2ad7a62f-4091-ecba-de21-d19edfb41086/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
     "68811d2b-4a6d-cbdc-39d3-f580aa97a297": {
       "uuid": "68811d2b-4a6d-cbdc-39d3-f580aa97a297",
       "name": "VALORANT GO! Vol. 2 Operator",
       "icon": "https://media.valorant-api.com/weaponskinlevels/68811d2b-4a6d-cbdc-39d3-f580aa97a297/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
+    "fd486ca0-4d52-4e9b-ec35-dc8cd450b679": {
+      "uuid": "fd486ca0-4d52-4e9b-ec35-dc8cd450b679",
+      "name": "Endeavour Operator",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/fd486ca0-4d52-4e9b-ec35-dc8cd450b679/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
     "4d19c241-4350-6658-f5a6-5c99ca8e5e99": {
       "uuid": "4d19c241-4350-6658-f5a6-5c99ca8e5e99",
@@ -1881,6 +2043,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/920d9d08-4f22-9f1e-b309-ddbbe5ecb91c/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
+    "c9ceffba-471d-ed6c-04a5-11b71bef3f60": {
+      "uuid": "c9ceffba-471d-ed6c-04a5-11b71bef3f60",
+      "name": "Neptune Guardian",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/c9ceffba-471d-ed6c-04a5-11b71bef3f60/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
     "e16ea577-4d7f-e686-456a-54b4b1d9cba2": {
       "uuid": "e16ea577-4d7f-e686-456a-54b4b1d9cba2",
       "name": "Gaia's Vengeance Guardian",
@@ -2025,6 +2193,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/6046ca8f-4100-4b1a-7e8d-5e8c6625342f/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
+    "43ea5cae-4535-7903-f2c9-65bac9642a99": {
+      "uuid": "43ea5cae-4535-7903-f2c9-65bac9642a99",
+      "name": "Doodle Buds Marshal",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/43ea5cae-4535-7903-f2c9-65bac9642a99/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
     "3e0a3431-4e78-89d1-ee57-d9837e324ee0": {
       "uuid": "3e0a3431-4e78-89d1-ee57-d9837e324ee0",
       "name": "Songsteel Marshal",
@@ -2060,6 +2234,12 @@
       "name": "Magepunk Marshal",
       "icon": "https://media.valorant-api.com/weaponskinlevels/b2f78500-4322-b03d-2745-a3b2208d63fe/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
+    "4dd7d0b9-40a9-de6c-ac61-aea19a6d8a77": {
+      "uuid": "4dd7d0b9-40a9-de6c-ac61-aea19a6d8a77",
+      "name": "Coalition: Cobra Marshal",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/4dd7d0b9-40a9-de6c-ac61-aea19a6d8a77/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
     "50265ad5-4f14-2b32-924e-02bbed2bea6f": {
       "uuid": "50265ad5-4f14-2b32-924e-02bbed2bea6f",
@@ -2109,10 +2289,22 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/4fcea818-4877-85f9-ba01-a0b02e1868f4/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
+    "737d2d1b-4b47-87a4-6045-5183580d27ec": {
+      "uuid": "737d2d1b-4b47-87a4-6045-5183580d27ec",
+      "name": "RGX 11z Pro Spectre",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/737d2d1b-4b47-87a4-6045-5183580d27ec/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
     "291cb44a-410d-b035-4d0b-608a92c2cd91": {
       "uuid": "291cb44a-410d-b035-4d0b-608a92c2cd91",
       "name": "VALORANT GO! Vol. 1 Spectre",
       "icon": "https://media.valorant-api.com/weaponskinlevels/291cb44a-410d-b035-4d0b-608a92c2cd91/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
+    "ef773863-472d-4d81-e50e-1d887cea40f4": {
+      "uuid": "ef773863-472d-4d81-e50e-1d887cea40f4",
+      "name": "Neptune Spectre",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/ef773863-472d-4d81-e50e-1d887cea40f4/displayicon.png",
       "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
     },
     "6c69c2bc-4c7a-6308-8384-a1b2aa00a50b": {
@@ -2223,6 +2415,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/1fdbe6f8-42ca-deb2-33da-caa2c4200544/displayicon.png",
       "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
+    "6803ed34-46cc-ba84-9e58-f78f6538151e": {
+      "uuid": "6803ed34-46cc-ba84-9e58-f78f6538151e",
+      "name": "Hue Shift Spectre",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/6803ed34-46cc-ba84-9e58-f78f6538151e/displayicon.png",
+      "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
     "cc3bb43a-4078-e7e6-5b43-3ba42fb9d7fb": {
       "uuid": "cc3bb43a-4078-e7e6-5b43-3ba42fb9d7fb",
       "name": "Aero Spectre",
@@ -2307,11 +2505,23 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/cd9beda3-4042-d79e-6d46-4daa61484362/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
     },
+    "0a6790a2-4ddf-56aa-26e4-44b45d050060": {
+      "uuid": "0a6790a2-4ddf-56aa-26e4-44b45d050060",
+      "name": "Doodle Buds Stinger",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/0a6790a2-4ddf-56aa-26e4-44b45d050060/displayicon.png",
+      "rarity": "60bca009-4182-7998-dee7-b8a2558dc369"
+    },
     "77d5c1dc-4dde-539c-3a5a-0a95eecba1e4": {
       "uuid": "77d5c1dc-4dde-539c-3a5a-0a95eecba1e4",
       "name": "Surge Stinger",
       "icon": "https://media.valorant-api.com/weaponskinlevels/77d5c1dc-4dde-539c-3a5a-0a95eecba1e4/displayicon.png",
       "rarity": "12683d76-48d7-84a3-4e09-6985794f0445"
+    },
+    "50e072a5-4f30-63a9-6dee-a8b33781269f": {
+      "uuid": "50e072a5-4f30-63a9-6dee-a8b33781269f",
+      "name": ".SYS Stinger",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/50e072a5-4f30-63a9-6dee-a8b33781269f/displayicon.png",
+      "rarity": "0cebb8be-46d7-c12a-d306-e9907bfc5a25"
     },
     "b5f7b00a-4c4b-a3d5-d2cc-fbb62c482ef6": {
       "uuid": "b5f7b00a-4c4b-a3d5-d2cc-fbb62c482ef6",
@@ -2397,6 +2607,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/a1762ed3-45bf-2dd5-776f-a18a33171e6f/displayicon.png",
       "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
     },
+    "424ed674-47dd-0488-de93-6cb8e13d0b90": {
+      "uuid": "424ed674-47dd-0488-de93-6cb8e13d0b90",
+      "name": "RGX 11z Pro Firefly",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/424ed674-47dd-0488-de93-6cb8e13d0b90/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
     "6e37a33a-416e-fcc0-ceb8-7784e18fbfe9": {
       "uuid": "6e37a33a-416e-fcc0-ceb8-7784e18fbfe9",
       "name": "VALORANT GO! Vol. 1 Knife",
@@ -2407,6 +2623,12 @@
       "uuid": "ec70c8c8-48db-b2dc-ab7d-1d9410b0cfbf",
       "name": "Yoru's Stylish Butterfly Comb",
       "icon": "https://media.valorant-api.com/weaponskinlevels/ec70c8c8-48db-b2dc-ab7d-1d9410b0cfbf/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
+    "85db497e-4b7d-dd9d-bc09-6d926158ed74": {
+      "uuid": "85db497e-4b7d-dd9d-bc09-6d926158ed74",
+      "name": "Neptune Anchor",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/85db497e-4b7d-dd9d-bc09-6d926158ed74/displayicon.png",
       "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
     },
     "f353f65b-4764-cfc5-df01-8db85ab28199": {
@@ -2509,6 +2731,12 @@
       "uuid": "726b77c9-41c3-80c6-f33e-068b9f74ef56",
       "name": "Ruin Dagger",
       "icon": "https://media.valorant-api.com/weaponskinlevels/726b77c9-41c3-80c6-f33e-068b9f74ef56/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
+    "9d9ec56d-4973-3531-64f5-6d8eb2beb0a2": {
+      "uuid": "9d9ec56d-4973-3531-64f5-6d8eb2beb0a2",
+      "name": ".SYS Melee",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/9d9ec56d-4973-3531-64f5-6d8eb2beb0a2/displayicon.png",
       "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
     },
     "249b0e46-4a11-f045-51bb-649151cd802a": {
@@ -2629,7 +2857,7 @@
       "uuid": "47897cd1-49e2-da3f-4a8f-b6a1e84b0dd0",
       "name": "Personal Administrative Melee Unit",
       "icon": "https://media.valorant-api.com/weaponskinlevels/47897cd1-49e2-da3f-4a8f-b6a1e84b0dd0/displayicon.png",
-      "rarity": "411e4a55-4e59-7757-41f0-86a53f101bb5"
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
     },
     "3710f62c-4e0c-65fd-848d-8da25d2fb833": {
       "uuid": "3710f62c-4e0c-65fd-848d-8da25d2fb833",
@@ -2673,6 +2901,12 @@
       "icon": "https://media.valorant-api.com/weaponskinlevels/e85cf8b6-467b-bc6c-9013-959383f71b2e/displayicon.png",
       "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
     },
+    "4745ba48-4d62-b01c-9cb9-48848fec9b66": {
+      "uuid": "4745ba48-4d62-b01c-9cb9-48848fec9b66",
+      "name": "Titanmail Mace",
+      "icon": "https://media.valorant-api.com/weaponskinlevels/4745ba48-4d62-b01c-9cb9-48848fec9b66/displayicon.png",
+      "rarity": "e046854e-406c-37f4-6607-19a9ba8426fc"
+    },
     "854938f3-4532-b300-d9a2-379d987d7469": {
       "uuid": "854938f3-4532-b300-d9a2-379d987d7469",
       "name": "Melee",
@@ -2705,7 +2939,7 @@
     }
   },
   "prices": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
     "4845a7ab-4120-ae1c-aec1-9e915a7424b1": 1275,
     "61f62d77-4f80-7664-2ea9-538f6fc4b241": 875,
     "c59442a5-4b74-792c-d996-71a5fb340625": 875,
@@ -3055,14 +3289,14 @@
     "e1b5cdca-4df5-5c4e-f34a-3cbdd3fd8735": 1275,
     "f2a7150b-4894-0dc8-53b3-bf9a30fa4ea4": 1275,
     "155ba654-4afa-1029-9e71-e0b6962d5410": 2550,
-    "6607dba5-4cb8-d860-3010-708bcbcbe808": 475,
-    "66554177-4970-fea5-22d2-c0bd8514888c": 375,
-    "e428e9d5-4912-ffac-031b-f293375cd14d": 325,
+    "47897cd1-49e2-da3f-4a8f-b6a1e84b0dd0": 4950,
     "544ddf0f-42c6-e410-c9db-fc8b3b2c84d4": 2475,
     "a7cf8684-41a0-3dd4-e30c-6f9b4b34e635": 2475,
     "12831559-44ee-c708-b97c-29a43938e3cd": 2475,
     "5eb7515f-40a1-2f15-de03-c9a024664737": 2475,
-    "47897cd1-49e2-da3f-4a8f-b6a1e84b0dd0": 4950,
+    "6607dba5-4cb8-d860-3010-708bcbcbe808": 475,
+    "66554177-4970-fea5-22d2-c0bd8514888c": 375,
+    "e428e9d5-4912-ffac-031b-f293375cd14d": 325,
     "d95a6ed0-4ce4-9730-a3ac-59af093dbdbf": 475,
     "53ebe88a-4548-6582-9dd0-edaf67ad8c1e": 375,
     "5cbab592-4571-be90-e1fa-268898ebd23c": 325,
@@ -3085,13 +3319,80 @@
     "e16ea577-4d7f-e686-456a-54b4b1d9cba2": 1775,
     "6046ca8f-4100-4b1a-7e8d-5e8c6625342f": 1775,
     "f353f65b-4764-cfc5-df01-8db85ab28199": 3550,
+    "e9d95d50-402a-b70c-e5ee-c1b23a18e20b": 475,
+    "6b8e3723-4530-74eb-2a67-19b48a45c53c": 375,
+    "8dc9e235-4def-c3eb-1d6f-609808a8afcc": 375,
+    "f06973d3-491f-652a-ce0f-469d3516ad16": 375,
+    "f4b95397-4740-9569-f2c6-ceb38da5bf73": 375,
+    "6f812af1-451d-0eab-59fe-93b64c5e2c77": 375,
+    "5e5fd29a-4e83-40fa-0012-e08470dacdd7": 325,
+    "e3d197d4-458b-7e60-dbbf-378788cf4863": 325,
+    "b57067d5-4d13-cd4d-7493-d386a2fc1cbb": 325,
+    "87a73941-4739-acbf-5c94-63ab07cd68d6": 325,
+    "db44205d-4b22-cf8a-cdee-a49fcf754ce3": 325,
+    "258f4b78-4286-a93b-309a-0bada49c06e1": 1275,
+    "fc4c3dcb-4f6d-5e8e-3dc3-1695f55d24c2": 1275,
+    "ca41d64f-4622-593f-382e-0484a1a3dd6b": 1275,
+    "8a3d3cb5-4c8f-0604-b931-9388de1eabad": 1275,
+    "4491f330-4d30-04f7-d609-4face7e5bd5f": 1275,
+    "433e7f5e-4aaa-940e-4003-99bc0df92c17": 875,
+    "44ffb8d4-4f48-9456-0463-a6bc1e6ecede": 875,
+    "38dbcca0-493d-70eb-ef89-d281f33efc94": 875,
+    "80073abf-4fea-b06d-f70c-bdbe6d8ce0a7": 875,
+    "fd486ca0-4d52-4e9b-ec35-dc8cd450b679": 875,
+    "c4ce702b-4b2a-a89c-5f24-f78406ebdd1f": 375,
+    "da32c450-4d12-2858-89fa-07be25d51b0b": 375,
+    "009f74aa-4c66-0f61-c165-9c91a3addff6": 375,
+    "8f9caa22-4dd6-5649-1007-0bbaf7001c04": 325,
+    "bbdcf328-4f71-3c0c-7830-568913236d35": 325,
+    "2e7b49d2-4022-a474-1feb-91872e6e2523": 325,
+    "8e0c9fac-4d40-0a04-cf4a-4bb553952164": 1775,
+    "f9d54c11-4c6f-575b-5bed-3cb693f6f2ba": 1775,
+    "deb200a8-447c-0e47-5b92-e8aeb9cd5525": 1775,
+    "43ea5cae-4535-7903-f2c9-65bac9642a99": 1775,
+    "0a6790a2-4ddf-56aa-26e4-44b45d050060": 1775,
+    "d8d95c6b-403c-3e7e-6682-a396bf4b3c96": 475,
+    "39729022-445a-d7bb-52e7-9e909e481db2": 375,
+    "3db4ad9c-4a92-d8b0-a5a1-008a7c67d699": 325,
+    "49a986d0-4a07-b756-331e-babe1b2839d9": 2175,
+    "90cd5d86-4516-918b-29af-07b116f63aa9": 2175,
+    "2ad7a62f-4091-ecba-de21-d19edfb41086": 2175,
+    "737d2d1b-4b47-87a4-6045-5183580d27ec": 2175,
+    "424ed674-47dd-0488-de93-6cb8e13d0b90": 4350,
+    "2317e839-44cd-2301-80a8-c4ac63c626ac": 1275,
+    "17f044eb-4016-5f86-f4f7-1095cc292a15": 1275,
+    "0771ccd2-40b0-54cf-37b4-c3b5cac03bdb": 1275,
+    "47ee5cb6-4059-df8b-6d40-5daaa01ff49f": 1275,
+    "4745ba48-4d62-b01c-9cb9-48848fec9b66": 2550,
+    "387e205b-4752-df32-41d0-5a81f617db4f": 475,
+    "49cea67c-4552-13c2-6b4b-8ba07761504e": 1775,
+    "93266c2b-400f-da62-24a0-739f51d33cc1": 1775,
+    "c9ceffba-471d-ed6c-04a5-11b71bef3f60": 1775,
+    "ef773863-472d-4d81-e50e-1d887cea40f4": 1775,
+    "85db497e-4b7d-dd9d-bc09-6d926158ed74": 3550,
+    "1a3a11bc-4477-4724-b804-3b9cdbf234d2": 0,
+    "893deca1-4123-9c1f-2985-aa9de74cb512": 0,
+    "5b27d2de-4a97-d6c1-76e7-669189c67072": 0,
+    "8d82ec0a-4c3b-8458-d0b6-e1bb900671cf": 0,
+    "80365467-4e7d-e7cf-bb93-a1b4bd844109": 0,
+    "e7fc5596-4687-f0c1-1e30-08808669ef07": 0,
+    "4714babb-415b-a9d6-f63d-9ea5b9c74601": 0,
+    "7a241692-4361-aec4-95cc-c0a700c9f2d9": 0,
+    "4dce4142-44bf-32e5-6f51-7e905389502c": 0,
     "f9cfa034-c7e1-4995-904c-1a296e7b1760": 1600,
     "da0edbc8-31fb-468e-95a8-27ac25cd76ed": 2800,
     "a61e8526-bb1f-4135-b7df-95e67b416efe": 4800,
-    "timestamp": 1646717042235
+    "timestamp": 1653725966257
   },
   "bundles": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
+    "ed453815-44aa-4c4d-f3aa-77b4bcf048d7": {
+      "uuid": "ed453815-44aa-4c4d-f3aa-77b4bcf048d7",
+      "name": "RGX 11z Pro",
+      "subName": null,
+      "description": null,
+      "icon": "https://media.valorant-api.com/bundles/ed453815-44aa-4c4d-f3aa-77b4bcf048d7/displayicon2.png"
+    },
     "d958b181-4e7b-dc60-7c3c-e3a3a376a8d2": {
       "uuid": "d958b181-4e7b-dc60-7c3c-e3a3a376a8d2",
       "name": "RGX 11z Pro",
@@ -3113,12 +3414,26 @@
       "description": null,
       "icon": "https://media.valorant-api.com/bundles/5c8b9297-465f-080c-3c0d-c9b9811432ed/displayicon2.png"
     },
+    "ce15405a-4471-3290-1a16-abab355f97da": {
+      "uuid": "ce15405a-4471-3290-1a16-abab355f97da",
+      "name": "Neptune",
+      "subName": null,
+      "description": null,
+      "icon": "https://media.valorant-api.com/bundles/ce15405a-4471-3290-1a16-abab355f97da/displayicon2.png"
+    },
     "e10e00ae-4dcc-3c4a-16f7-7e885314f0d0": {
       "uuid": "e10e00ae-4dcc-3c4a-16f7-7e885314f0d0",
       "name": "Gaia's Vengeance",
       "subName": null,
       "description": null,
       "icon": "https://media.valorant-api.com/bundles/e10e00ae-4dcc-3c4a-16f7-7e885314f0d0/displayicon2.png"
+    },
+    "957f55ff-48a1-d0e2-41b1-ca89bf036b6e": {
+      "uuid": "957f55ff-48a1-d0e2-41b1-ca89bf036b6e",
+      "name": "Endeavour",
+      "subName": null,
+      "description": null,
+      "icon": "https://media.valorant-api.com/bundles/957f55ff-48a1-d0e2-41b1-ca89bf036b6e/displayicon2.png"
     },
     "f7f37856-4af7-9b0e-08aa-91a5207c0439": {
       "uuid": "f7f37856-4af7-9b0e-08aa-91a5207c0439",
@@ -3182,6 +3497,13 @@
       "subName": null,
       "description": null,
       "icon": "https://media.valorant-api.com/bundles/05e8add9-404d-5d37-8973-9f93f8880e2d/displayicon2.png"
+    },
+    "2ed936df-4959-acc7-9aca-358d34a50619": {
+      "uuid": "2ed936df-4959-acc7-9aca-358d34a50619",
+      "name": "Doodle Buds",
+      "subName": null,
+      "description": null,
+      "icon": "https://media.valorant-api.com/bundles/2ed936df-4959-acc7-9aca-358d34a50619/displayicon2.png"
     },
     "1ba50cf0-46dd-848f-13a9-dc92fb0a3e3b": {
       "uuid": "1ba50cf0-46dd-848f-13a9-dc92fb0a3e3b",
@@ -3344,6 +3666,13 @@
       "description": null,
       "icon": "https://media.valorant-api.com/bundles/ebfb909d-45ba-c514-3369-55bf014ba293/displayicon2.png"
     },
+    "7b6b00f0-4fb9-7395-067d-44bcb4e20d9a": {
+      "uuid": "7b6b00f0-4fb9-7395-067d-44bcb4e20d9a",
+      "name": "Pride",
+      "subName": null,
+      "description": null,
+      "icon": "https://media.valorant-api.com/bundles/7b6b00f0-4fb9-7395-067d-44bcb4e20d9a/displayicon2.png"
+    },
     "ab83f73d-485f-e010-8ea0-24b538468a1a": {
       "uuid": "ab83f73d-485f-e010-8ea0-24b538468a1a",
       "name": "Protocol 781-A",
@@ -3428,6 +3757,13 @@
       "description": null,
       "icon": "https://media.valorant-api.com/bundles/b6b1b7ea-4a10-f810-a416-03adbb69d379/displayicon2.png"
     },
+    "866ce9c2-4493-daba-a025-7c805c4e3eed": {
+      "uuid": "866ce9c2-4493-daba-a025-7c805c4e3eed",
+      "name": "Titanmail",
+      "subName": null,
+      "description": null,
+      "icon": "https://media.valorant-api.com/bundles/866ce9c2-4493-daba-a025-7c805c4e3eed/displayicon2.png"
+    },
     "f1befd6b-4270-01b6-8a43-06b52fa417ae": {
       "uuid": "f1befd6b-4270-01b6-8a43-06b52fa417ae",
       "name": "Tigris",
@@ -3472,7 +3808,7 @@
     }
   },
   "rarities": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
     "0cebb8be-46d7-c12a-d306-e9907bfc5a25": {
       "uuid": "0cebb8be-46d7-c12a-d306-e9907bfc5a25",
       "name": "Deluxe",
@@ -3500,11 +3836,21 @@
     }
   },
   "buddies": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
     "a3043ec2-4a5b-ca46-d8f6-0399f1e52565": {
       "uuid": "a3043ec2-4a5b-ca46-d8f6-0399f1e52565",
       "name": "RGX 11z Pro Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/a3043ec2-4a5b-ca46-d8f6-0399f1e52565/displayicon.png"
+    },
+    "d8d95c6b-403c-3e7e-6682-a396bf4b3c96": {
+      "uuid": "d8d95c6b-403c-3e7e-6682-a396bf4b3c96",
+      "name": "RGX 11z Pro, Ep 4 Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/d8d95c6b-403c-3e7e-6682-a396bf4b3c96/displayicon.png"
+    },
+    "387e205b-4752-df32-41d0-5a81f617db4f": {
+      "uuid": "387e205b-4752-df32-41d0-5a81f617db4f",
+      "name": "Neptune Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/387e205b-4752-df32-41d0-5a81f617db4f/displayicon.png"
     },
     "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac": {
       "uuid": "7c2881fb-4bd3-3d98-4e5b-72a939eb2cac",
@@ -3545,6 +3891,11 @@
       "uuid": "58584a97-4839-3cb0-6f21-02809648df92",
       "name": "Boba Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/58584a97-4839-3cb0-6f21-02809648df92/displayicon.png"
+    },
+    "4bea7864-4a08-e510-97c6-42bdd9e1182d": {
+      "uuid": "4bea7864-4a08-e510-97c6-42bdd9e1182d",
+      "name": "Nazar Bead Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/4bea7864-4a08-e510-97c6-42bdd9e1182d/displayicon.png"
     },
     "98a2fa9e-4e66-eec9-8b13-298498862f28": {
       "uuid": "98a2fa9e-4e66-eec9-8b13-298498862f28",
@@ -3736,6 +4087,11 @@
       "name": "Ep 4 // 2 Coin Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/8bd7eb45-4f03-1c4f-615c-39830c57f3bb/displayicon.png"
     },
+    "83c144bc-44f7-2d80-23f5-1fb0782d23b2": {
+      "uuid": "83c144bc-44f7-2d80-23f5-1fb0782d23b2",
+      "name": "EP 4 // 3 Coin Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/83c144bc-44f7-2d80-23f5-1fb0782d23b2/displayicon.png"
+    },
     "c5f4c423-43de-9553-456d-fbb809cfb74c": {
       "uuid": "c5f4c423-43de-9553-456d-fbb809cfb74c",
       "name": "Follow Me Buddy",
@@ -3766,6 +4122,11 @@
       "name": "Cup o' Crown Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/967652c0-48c5-1b18-ae3e-2bb066f2623d/displayicon.png"
     },
+    "2d4dcbe6-452e-6b68-f977-c5ac74dc61eb": {
+      "uuid": "2d4dcbe6-452e-6b68-f977-c5ac74dc61eb",
+      "name": "Prime Time Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/2d4dcbe6-452e-6b68-f977-c5ac74dc61eb/displayicon.png"
+    },
     "635aaf5b-4351-7d5e-ed47-e5aa3ad48214": {
       "uuid": "635aaf5b-4351-7d5e-ed47-e5aa3ad48214",
       "name": "Arcane Cupcake Buddy",
@@ -3785,6 +4146,11 @@
       "uuid": "3da96301-4edd-0d74-492c-6e9d0766665a",
       "name": "Glitchpop, EP 2 Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/3da96301-4edd-0d74-492c-6e9d0766665a/displayicon.png"
+    },
+    "35608d62-4f08-dc80-7211-ce94ec8b7508": {
+      "uuid": "35608d62-4f08-dc80-7211-ce94ec8b7508",
+      "name": "Dalgona Coffee Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/35608d62-4f08-dc80-7211-ce94ec8b7508/displayicon.png"
     },
     "28227664-476a-72db-adaa-159084fbd149": {
       "uuid": "28227664-476a-72db-adaa-159084fbd149",
@@ -3821,6 +4187,11 @@
       "name": "VLT/R Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/b3cee508-4897-6f83-4afe-1e81a78b432b/displayicon.png"
     },
+    "cdff7783-4977-f912-1b88-92be8883fc7a": {
+      "uuid": "cdff7783-4977-f912-1b88-92be8883fc7a",
+      "name": "Ragna-Rock Out Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/cdff7783-4977-f912-1b88-92be8883fc7a/displayicon.png"
+    },
     "a4e3fe97-4de9-c133-7dd0-f2b294a2ead2": {
       "uuid": "a4e3fe97-4de9-c133-7dd0-f2b294a2ead2",
       "name": "Happy Dumpling Buddy",
@@ -3853,12 +4224,12 @@
     },
     "02b22bd6-42fa-90f6-0574-2091794d3eb1": {
       "uuid": "02b22bd6-42fa-90f6-0574-2091794d3eb1",
-      "name": "2021 VCT Champions Winner Buddy",
+      "name": "VCT Champions Winner Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/02b22bd6-42fa-90f6-0574-2091794d3eb1/displayicon.png"
     },
     "ef6ddfab-45f9-7938-7ff2-9588dec2f71d": {
       "uuid": "ef6ddfab-45f9-7938-7ff2-9588dec2f71d",
-      "name": "2021 VCT Masters Winner Buddy",
+      "name": "VCT Masters Winner Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/ef6ddfab-45f9-7938-7ff2-9588dec2f71d/displayicon.png"
     },
     "f470ff75-4f99-c13a-5819-0b8cc78ad839": {
@@ -3911,6 +4282,11 @@
       "name": "KNG Meridian Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/205e055c-452b-fef8-3356-b8a1c000f1c0/displayicon.png"
     },
+    "754ab032-4889-a01f-e6d3-cdb625a42561": {
+      "uuid": "754ab032-4889-a01f-e6d3-cdb625a42561",
+      "name": "Deep Divisions Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/754ab032-4889-a01f-e6d3-cdb625a42561/displayicon.png"
+    },
     "6c1a9a5c-4fc8-8ff7-5fb9-3b957b4fe2ac": {
       "uuid": "6c1a9a5c-4fc8-8ff7-5fb9-3b957b4fe2ac",
       "name": "Le Baguette Buddy",
@@ -3955,6 +4331,11 @@
       "uuid": "473df037-45a2-43d6-4da1-8f99e220d0ad",
       "name": "Memory Chip Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/473df037-45a2-43d6-4da1-8f99e220d0ad/displayicon.png"
+    },
+    "da93c98c-4473-c217-b666-168169395614": {
+      "uuid": "da93c98c-4473-c217-b666-168169395614",
+      "name": ".SYS Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/da93c98c-4473-c217-b666-168169395614/displayicon.png"
     },
     "10d781c0-4500-19eb-5000-c6afac6f2c58": {
       "uuid": "10d781c0-4500-19eb-5000-c6afac6f2c58",
@@ -4071,6 +4452,11 @@
       "name": "Spline Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/ec3745c4-432a-8173-8150-cfbb4841c121/displayicon.png"
     },
+    "373009dd-404c-27d2-3ed3-4889492c580d": {
+      "uuid": "373009dd-404c-27d2-3ed3-4889492c580d",
+      "name": "On The Case Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/373009dd-404c-27d2-3ed3-4889492c580d/displayicon.png"
+    },
     "9a1f81d9-4fd2-35da-2cec-ba8b75ee6ef9": {
       "uuid": "9a1f81d9-4fd2-35da-2cec-ba8b75ee6ef9",
       "name": "Magic Mance Buddy",
@@ -4146,6 +4532,11 @@
       "name": "Keep it Safe Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/73466a36-43e4-232f-63be-c390f8c5e139/displayicon.png"
     },
+    "6b111258-4ddd-8195-8293-a9b468e98659": {
+      "uuid": "6b111258-4ddd-8195-8293-a9b468e98659",
+      "name": "Keep it Safer Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/6b111258-4ddd-8195-8293-a9b468e98659/displayicon.png"
+    },
     "b0e1c557-4c45-bdc7-3e02-1facc7b19182": {
       "uuid": "b0e1c557-4c45-bdc7-3e02-1facc7b19182",
       "name": "Venom Vial Buddy",
@@ -4165,6 +4556,11 @@
       "uuid": "041a43a4-46fe-dab7-c974-36bf91eab33d",
       "name": "High Top Heat Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/041a43a4-46fe-dab7-c974-36bf91eab33d/displayicon.png"
+    },
+    "72a5a776-4763-0685-06c1-bbaa14d0f93d": {
+      "uuid": "72a5a776-4763-0685-06c1-bbaa14d0f93d",
+      "name": "Hue Shift Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/72a5a776-4763-0685-06c1-bbaa14d0f93d/displayicon.png"
     },
     "e64b89a7-44ed-286e-08bf-0cb96fd2bfd2": {
       "uuid": "e64b89a7-44ed-286e-08bf-0cb96fd2bfd2",
@@ -4211,10 +4607,20 @@
       "name": "One Direction Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/b7a05430-4ae1-b88e-0b0b-d6956bf7f9ad/displayicon.png"
     },
+    "1a3a11bc-4477-4724-b804-3b9cdbf234d2": {
+      "uuid": "1a3a11bc-4477-4724-b804-3b9cdbf234d2",
+      "name": "Pride 2022 Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/1a3a11bc-4477-4724-b804-3b9cdbf234d2/displayicon.png"
+    },
     "6607dba5-4cb8-d860-3010-708bcbcbe808": {
       "uuid": "6607dba5-4cb8-d860-3010-708bcbcbe808",
       "name": "Protocol 781-A Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/6607dba5-4cb8-d860-3010-708bcbcbe808/displayicon.png"
+    },
+    "9ff61d8a-40e7-1d30-51a3-99806638ec35": {
+      "uuid": "9ff61d8a-40e7-1d30-51a3-99806638ec35",
+      "name": "Original Protractor Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/9ff61d8a-40e7-1d30-51a3-99806638ec35/displayicon.png"
     },
     "d88fa813-4ade-1585-0865-90be2c984214": {
       "uuid": "d88fa813-4ade-1585-0865-90be2c984214",
@@ -4491,6 +4897,11 @@
       "name": "Bunny Tactics Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/c44c3d43-45f4-1841-ec58-1885ef6fbcd5/displayicon.png"
     },
+    "d3706573-4b0c-83e0-af4b-f5a4e854e097": {
+      "uuid": "d3706573-4b0c-83e0-af4b-f5a4e854e097",
+      "name": "UltraBright Torch Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/d3706573-4b0c-83e0-af4b-f5a4e854e097/displayicon.png"
+    },
     "0b3f4807-4b50-2379-9690-398af0041dca": {
       "uuid": "0b3f4807-4b50-2379-9690-398af0041dca",
       "name": "Squirrel Tactics Buddy",
@@ -4581,6 +4992,11 @@
       "name": "Pocket Knife Buddy",
       "icon": "https://media.valorant-api.com/buddylevels/cbc43eac-44f5-9bd6-f0dd-40954a12b709/displayicon.png"
     },
+    "76e55869-41dd-562b-24a1-e081df68e0ea": {
+      "uuid": "76e55869-41dd-562b-24a1-e081df68e0ea",
+      "name": "PlayZilla Trick Master Buddy",
+      "icon": "https://media.valorant-api.com/buddylevels/76e55869-41dd-562b-24a1-e081df68e0ea/displayicon.png"
+    },
     "a20cf772-4d6a-d3c8-7e60-72bab4446f2f": {
       "uuid": "a20cf772-4d6a-d3c8-7e60-72bab4446f2f",
       "name": "Zoomer Pop Buddy",
@@ -4588,7 +5004,7 @@
     }
   },
   "sprays": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
     "3d2bcfc5-442b-812e-3c08-9180d6b36077": {
       "uuid": "3d2bcfc5-442b-812e-3c08-9180d6b36077",
       "name": "Caught on Camera Spray",
@@ -4714,6 +5130,11 @@
       "name": "RGX 11z Pro Spray",
       "icon": "https://media.valorant-api.com/sprays/8035dd5d-4ddd-5dbd-165c-9886574fdff5/fulltransparenticon.png"
     },
+    "3db4ad9c-4a92-d8b0-a5a1-008a7c67d699": {
+      "uuid": "3db4ad9c-4a92-d8b0-a5a1-008a7c67d699",
+      "name": "RGX 11z Pro, Ep 4 Spray",
+      "icon": "https://media.valorant-api.com/sprays/3db4ad9c-4a92-d8b0-a5a1-008a7c67d699/fulltransparenticon.png"
+    },
     "8b7154e2-4453-2515-0867-62a1075b03ad": {
       "uuid": "8b7154e2-4453-2515-0867-62a1075b03ad",
       "name": "Gaia's Vengeance Spray",
@@ -4728,6 +5149,21 @@
       "uuid": "35d8fb90-49a9-641e-ff08-b4bc20421908",
       "name": "Boom! Spray",
       "icon": "https://media.valorant-api.com/sprays/35d8fb90-49a9-641e-ff08-b4bc20421908/fulltransparenticon.png"
+    },
+    "e42f668f-4829-10af-02ca-4abf7fa74fb5": {
+      "uuid": "e42f668f-4829-10af-02ca-4abf7fa74fb5",
+      "name": "Fade Spray",
+      "icon": "https://media.valorant-api.com/sprays/e42f668f-4829-10af-02ca-4abf7fa74fb5/fulltransparenticon.png"
+    },
+    "da32f415-4593-dba5-e09c-9fb6af3325e0": {
+      "uuid": "da32f415-4593-dba5-e09c-9fb6af3325e0",
+      "name": "On the Prowl Spray",
+      "icon": "https://media.valorant-api.com/sprays/da32f415-4593-dba5-e09c-9fb6af3325e0/fulltransparenticon.png"
+    },
+    "7a46d7de-409e-a15a-a052-89a6808eb549": {
+      "uuid": "7a46d7de-409e-a15a-a052-89a6808eb549",
+      "name": "Eye Opener Spray",
+      "icon": "https://media.valorant-api.com/sprays/7a46d7de-409e-a15a-a052-89a6808eb549/fulltransparenticon.png"
     },
     "a05c50b7-4a1d-c2de-e1e7-ac8a7730daa4": {
       "uuid": "a05c50b7-4a1d-c2de-e1e7-ac8a7730daa4",
@@ -4813,6 +5249,21 @@
       "uuid": "e8a8c717-4845-3c69-9c16-d8a78153c51d",
       "name": "Bruno Coin Spray",
       "icon": "https://media.valorant-api.com/sprays/e8a8c717-4845-3c69-9c16-d8a78153c51d/fulltransparenticon.png"
+    },
+    "8f9caa22-4dd6-5649-1007-0bbaf7001c04": {
+      "uuid": "8f9caa22-4dd6-5649-1007-0bbaf7001c04",
+      "name": "Doodle Buds // Tactifriends Spray",
+      "icon": "https://media.valorant-api.com/sprays/8f9caa22-4dd6-5649-1007-0bbaf7001c04/fulltransparenticon.png"
+    },
+    "bbdcf328-4f71-3c0c-7830-568913236d35": {
+      "uuid": "bbdcf328-4f71-3c0c-7830-568913236d35",
+      "name": "Doodle Buds // League of Legends Spray",
+      "icon": "https://media.valorant-api.com/sprays/bbdcf328-4f71-3c0c-7830-568913236d35/fulltransparenticon.png"
+    },
+    "2e7b49d2-4022-a474-1feb-91872e6e2523": {
+      "uuid": "2e7b49d2-4022-a474-1feb-91872e6e2523",
+      "name": "Doodle Buds // Agents Spray",
+      "icon": "https://media.valorant-api.com/sprays/2e7b49d2-4022-a474-1feb-91872e6e2523/fulltransparenticon.png"
     },
     "0221e96d-49be-a601-52d6-ef8270773276": {
       "uuid": "0221e96d-49be-a601-52d6-ef8270773276",
@@ -5434,6 +5885,86 @@
       "name": "Epilogue: #SAVEWIDEJOY Spray",
       "icon": "https://media.valorant-api.com/sprays/beeafc3b-49f8-d5e6-dbd4-b791c9ce91fe/fulltransparenticon.png"
     },
+    "0e399ff1-44be-3289-23aa-5082090912fd": {
+      "uuid": "0e399ff1-44be-3289-23aa-5082090912fd",
+      "name": "Caution: Blinding Bird! Spray",
+      "icon": "https://media.valorant-api.com/sprays/0e399ff1-44be-3289-23aa-5082090912fd/fulltransparenticon.png"
+    },
+    "bae38782-4d0a-1e95-52a4-9ca8059ba6d2": {
+      "uuid": "bae38782-4d0a-1e95-52a4-9ca8059ba6d2",
+      "name": "Cap? No Cap? Spray",
+      "icon": "https://media.valorant-api.com/sprays/bae38782-4d0a-1e95-52a4-9ca8059ba6d2/fulltransparenticon.png"
+    },
+    "f3788407-4ecf-4d91-72d5-63a9ec8c92dc": {
+      "uuid": "f3788407-4ecf-4d91-72d5-63a9ec8c92dc",
+      "name": "Bawk Bawk Brimstone Spray",
+      "icon": "https://media.valorant-api.com/sprays/f3788407-4ecf-4d91-72d5-63a9ec8c92dc/fulltransparenticon.png"
+    },
+    "ba0a3fdd-4f01-6766-a4c7-348bea8764bb": {
+      "uuid": "ba0a3fdd-4f01-6766-a4c7-348bea8764bb",
+      "name": "Keeping Secrets Spray",
+      "icon": "https://media.valorant-api.com/sprays/ba0a3fdd-4f01-6766-a4c7-348bea8764bb/fulltransparenticon.png"
+    },
+    "47dfa1e6-43f8-5eab-7e4f-5f8f62158104": {
+      "uuid": "47dfa1e6-43f8-5eab-7e4f-5f8f62158104",
+      "name": "Backseat Coaching Spray",
+      "icon": "https://media.valorant-api.com/sprays/47dfa1e6-43f8-5eab-7e4f-5f8f62158104/fulltransparenticon.png"
+    },
+    "3ce8ebdc-435a-b6fb-c2f3-8e9877551a31": {
+      "uuid": "3ce8ebdc-435a-b6fb-c2f3-8e9877551a31",
+      "name": "Heaven or Hell? Spray",
+      "icon": "https://media.valorant-api.com/sprays/3ce8ebdc-435a-b6fb-c2f3-8e9877551a31/fulltransparenticon.png"
+    },
+    "c6b77fc4-4f49-9259-04a4-b68ad4c3f910": {
+      "uuid": "c6b77fc4-4f49-9259-04a4-b68ad4c3f910",
+      "name": "I Have Three Creds Spray",
+      "icon": "https://media.valorant-api.com/sprays/c6b77fc4-4f49-9259-04a4-b68ad4c3f910/fulltransparenticon.png"
+    },
+    "0020abc7-41ce-d2f9-db8a-0b90e5a64547": {
+      "uuid": "0020abc7-41ce-d2f9-db8a-0b90e5a64547",
+      "name": "Charge Needed Spray",
+      "icon": "https://media.valorant-api.com/sprays/0020abc7-41ce-d2f9-db8a-0b90e5a64547/fulltransparenticon.png"
+    },
+    "d0e2ca19-4329-9ef1-f2ed-4ca2150749fc": {
+      "uuid": "d0e2ca19-4329-9ef1-f2ed-4ca2150749fc",
+      "name": "Look Behind You Spray",
+      "icon": "https://media.valorant-api.com/sprays/d0e2ca19-4329-9ef1-f2ed-4ca2150749fc/fulltransparenticon.png"
+    },
+    "13b93799-4498-7429-2bef-9d8c36c23e27": {
+      "uuid": "13b93799-4498-7429-2bef-9d8c36c23e27",
+      "name": "Coalition: Cobra Spray",
+      "icon": "https://media.valorant-api.com/sprays/13b93799-4498-7429-2bef-9d8c36c23e27/fulltransparenticon.png"
+    },
+    "a71132dd-4f49-c391-fa4a-2fa410cd9b4b": {
+      "uuid": "a71132dd-4f49-c391-fa4a-2fa410cd9b4b",
+      "name": "Pretty Pretty Please Spray",
+      "icon": "https://media.valorant-api.com/sprays/a71132dd-4f49-c391-fa4a-2fa410cd9b4b/fulltransparenticon.png"
+    },
+    "f917c3a1-4349-9335-4864-46806eb8c764": {
+      "uuid": "f917c3a1-4349-9335-4864-46806eb8c764",
+      "name": "It's Stinger Time Spray",
+      "icon": "https://media.valorant-api.com/sprays/f917c3a1-4349-9335-4864-46806eb8c764/fulltransparenticon.png"
+    },
+    "89cd9d61-41c8-156a-6b07-b5af51aaf07f": {
+      "uuid": "89cd9d61-41c8-156a-6b07-b5af51aaf07f",
+      "name": "Epilogue: It's Stinger Time Spray",
+      "icon": "https://media.valorant-api.com/sprays/89cd9d61-41c8-156a-6b07-b5af51aaf07f/fulltransparenticon.png"
+    },
+    "3b1a23b5-4119-3c68-27ed-3e85510c954e": {
+      "uuid": "3b1a23b5-4119-3c68-27ed-3e85510c954e",
+      "name": "Terrible Day for Rain Spray",
+      "icon": "https://media.valorant-api.com/sprays/3b1a23b5-4119-3c68-27ed-3e85510c954e/fulltransparenticon.png"
+    },
+    "41566c1b-4d7b-2cba-dd5a-01abf2d67242": {
+      "uuid": "41566c1b-4d7b-2cba-dd5a-01abf2d67242",
+      "name": "Don't Watch This Spray",
+      "icon": "https://media.valorant-api.com/sprays/41566c1b-4d7b-2cba-dd5a-01abf2d67242/fulltransparenticon.png"
+    },
+    "73292c82-4718-ad6e-0ae1-42a8f208b968": {
+      "uuid": "73292c82-4718-ad6e-0ae1-42a8f208b968",
+      "name": "Skeptical Viper Spray",
+      "icon": "https://media.valorant-api.com/sprays/73292c82-4718-ad6e-0ae1-42a8f208b968/fulltransparenticon.png"
+    },
     "f9bcf120-42b6-6986-2acd-6aa87bab4089": {
       "uuid": "f9bcf120-42b6-6986-2acd-6aa87bab4089",
       "name": "VCT 2021 Spark Spray",
@@ -5944,6 +6475,11 @@
       "name": "Vandal Life Spray",
       "icon": "https://media.valorant-api.com/sprays/27c5fd11-4f69-031a-6ee0-6da838ed7998/fulltransparenticon.png"
     },
+    "be8eeab6-43eb-d0b7-7b38-f6bb25ef7547": {
+      "uuid": "be8eeab6-43eb-d0b7-7b38-f6bb25ef7547",
+      "name": "Accidental Renaissance Spray",
+      "icon": "https://media.valorant-api.com/sprays/be8eeab6-43eb-d0b7-7b38-f6bb25ef7547/fulltransparenticon.png"
+    },
     "fd1a5a33-4170-95a4-f02a-118fb3f0b5c3": {
       "uuid": "fd1a5a33-4170-95a4-f02a-118fb3f0b5c3",
       "name": "Omen Spray",
@@ -5976,7 +6512,7 @@
     }
   },
   "cards": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
     "33c1f011-4eca-068c-9751-f68c788b2eee": {
       "uuid": "33c1f011-4eca-068c-9751-f68c788b2eee",
       "name": "The Way Forward Card",
@@ -6281,6 +6817,24 @@
         "small": "https://media.valorant-api.com/playercards/e6529e9c-4a2b-c31c-7252-e185a8ce4a04/smallart.png",
         "wide": "https://media.valorant-api.com/playercards/e6529e9c-4a2b-c31c-7252-e185a8ce4a04/wideart.png",
         "large": "https://media.valorant-api.com/playercards/e6529e9c-4a2b-c31c-7252-e185a8ce4a04/largeart.png"
+      }
+    },
+    "3d3e270e-4c89-ea1f-2bea-32a40a21dd75": {
+      "uuid": "3d3e270e-4c89-ea1f-2bea-32a40a21dd75",
+      "name": "VALORANT Fade Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/3d3e270e-4c89-ea1f-2bea-32a40a21dd75/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/3d3e270e-4c89-ea1f-2bea-32a40a21dd75/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/3d3e270e-4c89-ea1f-2bea-32a40a21dd75/largeart.png"
+      }
+    },
+    "867e85c2-4f4e-797b-7c94-a0b403fe22f3": {
+      "uuid": "867e85c2-4f4e-797b-7c94-a0b403fe22f3",
+      "name": "Dark Tide Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/867e85c2-4f4e-797b-7c94-a0b403fe22f3/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/867e85c2-4f4e-797b-7c94-a0b403fe22f3/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/867e85c2-4f4e-797b-7c94-a0b403fe22f3/largeart.png"
       }
     },
     "e99656df-bbb0-4db4-867b-29a31cbe2e51": {
@@ -6668,6 +7222,33 @@
         "small": "https://media.valorant-api.com/playercards/52d88add-4269-97c1-fde3-36bcac1a436a/smallart.png",
         "wide": "https://media.valorant-api.com/playercards/52d88add-4269-97c1-fde3-36bcac1a436a/wideart.png",
         "large": "https://media.valorant-api.com/playercards/52d88add-4269-97c1-fde3-36bcac1a436a/largeart.png"
+      }
+    },
+    "c4ce702b-4b2a-a89c-5f24-f78406ebdd1f": {
+      "uuid": "c4ce702b-4b2a-a89c-5f24-f78406ebdd1f",
+      "name": "Doodle Buds // League of Legends Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/c4ce702b-4b2a-a89c-5f24-f78406ebdd1f/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/c4ce702b-4b2a-a89c-5f24-f78406ebdd1f/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/c4ce702b-4b2a-a89c-5f24-f78406ebdd1f/largeart.png"
+      }
+    },
+    "da32c450-4d12-2858-89fa-07be25d51b0b": {
+      "uuid": "da32c450-4d12-2858-89fa-07be25d51b0b",
+      "name": "Doodle Buds // Agents Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/da32c450-4d12-2858-89fa-07be25d51b0b/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/da32c450-4d12-2858-89fa-07be25d51b0b/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/da32c450-4d12-2858-89fa-07be25d51b0b/largeart.png"
+      }
+    },
+    "009f74aa-4c66-0f61-c165-9c91a3addff6": {
+      "uuid": "009f74aa-4c66-0f61-c165-9c91a3addff6",
+      "name": "Doodle Buds // Tactifriends Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/009f74aa-4c66-0f61-c165-9c91a3addff6/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/009f74aa-4c66-0f61-c165-9c91a3addff6/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/009f74aa-4c66-0f61-c165-9c91a3addff6/largeart.png"
       }
     },
     "8b26fe6c-409e-6ce8-3dc1-50ae5a503805": {
@@ -7570,24 +8151,6 @@
         "large": "https://media.valorant-api.com/playercards/eac64718-4956-31ef-2c95-8b85e93d7fcc/largeart.png"
       }
     },
-    "ec50c37c-455a-ae63-353f-c399f36e55d6": {
-      "uuid": "ec50c37c-455a-ae63-353f-c399f36e55d6",
-      "name": "Penguin Precision Card",
-      "icons": {
-        "small": "https://media.valorant-api.com/playercards/ec50c37c-455a-ae63-353f-c399f36e55d6/smallart.png",
-        "wide": "https://media.valorant-api.com/playercards/ec50c37c-455a-ae63-353f-c399f36e55d6/wideart.png",
-        "large": "https://media.valorant-api.com/playercards/ec50c37c-455a-ae63-353f-c399f36e55d6/largeart.png"
-      }
-    },
-    "02c770d2-4234-9c57-51d8-a2a660241e7c": {
-      "uuid": "02c770d2-4234-9c57-51d8-a2a660241e7c",
-      "name": "Epilogue: Penguin Precision Card",
-      "icons": {
-        "small": "https://media.valorant-api.com/playercards/02c770d2-4234-9c57-51d8-a2a660241e7c/smallart.png",
-        "wide": "https://media.valorant-api.com/playercards/02c770d2-4234-9c57-51d8-a2a660241e7c/wideart.png",
-        "large": "https://media.valorant-api.com/playercards/02c770d2-4234-9c57-51d8-a2a660241e7c/largeart.png"
-      }
-    },
     "41cca792-4496-6b28-3dcc-a4ae99df7ce0": {
       "uuid": "41cca792-4496-6b28-3dcc-a4ae99df7ce0",
       "name": "Bulwark Armory Card",
@@ -7622,6 +8185,123 @@
         "small": "https://media.valorant-api.com/playercards/d493dd78-4bbb-eab8-8256-2d9766de48e6/smallart.png",
         "wide": "https://media.valorant-api.com/playercards/d493dd78-4bbb-eab8-8256-2d9766de48e6/wideart.png",
         "large": "https://media.valorant-api.com/playercards/d493dd78-4bbb-eab8-8256-2d9766de48e6/largeart.png"
+      }
+    },
+    "fdef838a-40d1-9954-ad6d-588a7a8739f0": {
+      "uuid": "fdef838a-40d1-9954-ad6d-588a7a8739f0",
+      "name": "Snake Bite Schema Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/fdef838a-40d1-9954-ad6d-588a7a8739f0/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/fdef838a-40d1-9954-ad6d-588a7a8739f0/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/fdef838a-40d1-9954-ad6d-588a7a8739f0/largeart.png"
+      }
+    },
+    "2dc2f8f9-4741-eff2-7684-868f8aee9974": {
+      "uuid": "2dc2f8f9-4741-eff2-7684-868f8aee9974",
+      "name": "World Divided Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/2dc2f8f9-4741-eff2-7684-868f8aee9974/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/2dc2f8f9-4741-eff2-7684-868f8aee9974/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/2dc2f8f9-4741-eff2-7684-868f8aee9974/largeart.png"
+      }
+    },
+    "5d56c40f-4798-9385-45bd-b9889854e3b5": {
+      "uuid": "5d56c40f-4798-9385-45bd-b9889854e3b5",
+      "name": "Fade ID Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/5d56c40f-4798-9385-45bd-b9889854e3b5/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/5d56c40f-4798-9385-45bd-b9889854e3b5/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/5d56c40f-4798-9385-45bd-b9889854e3b5/largeart.png"
+      }
+    },
+    "cfd8d9e8-4984-21ed-00a6-53916619c68f": {
+      "uuid": "cfd8d9e8-4984-21ed-00a6-53916619c68f",
+      "name": ".SYS Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/cfd8d9e8-4984-21ed-00a6-53916619c68f/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/cfd8d9e8-4984-21ed-00a6-53916619c68f/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/cfd8d9e8-4984-21ed-00a6-53916619c68f/largeart.png"
+      }
+    },
+    "5a99e70c-4df7-118c-4676-5588a79654ad": {
+      "uuid": "5a99e70c-4df7-118c-4676-5588a79654ad",
+      "name": "Breeze Schema Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/5a99e70c-4df7-118c-4676-5588a79654ad/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/5a99e70c-4df7-118c-4676-5588a79654ad/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/5a99e70c-4df7-118c-4676-5588a79654ad/largeart.png"
+      }
+    },
+    "6f39b789-4318-f79e-14e9-0a872f6ba6a2": {
+      "uuid": "6f39b789-4318-f79e-14e9-0a872f6ba6a2",
+      "name": "Defuse Denial Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/6f39b789-4318-f79e-14e9-0a872f6ba6a2/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/6f39b789-4318-f79e-14e9-0a872f6ba6a2/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/6f39b789-4318-f79e-14e9-0a872f6ba6a2/largeart.png"
+      }
+    },
+    "12216d1f-4f05-1600-feb1-aebf82a4bc13": {
+      "uuid": "12216d1f-4f05-1600-feb1-aebf82a4bc13",
+      "name": "Unstoppable // Phoenix Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/12216d1f-4f05-1600-feb1-aebf82a4bc13/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/12216d1f-4f05-1600-feb1-aebf82a4bc13/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/12216d1f-4f05-1600-feb1-aebf82a4bc13/largeart.png"
+      }
+    },
+    "9e07cbfe-4af2-bb11-78e8-e0b9de09ea23": {
+      "uuid": "9e07cbfe-4af2-bb11-78e8-e0b9de09ea23",
+      "name": "Skin Shopping Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/9e07cbfe-4af2-bb11-78e8-e0b9de09ea23/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/9e07cbfe-4af2-bb11-78e8-e0b9de09ea23/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/9e07cbfe-4af2-bb11-78e8-e0b9de09ea23/largeart.png"
+      }
+    },
+    "051e29eb-4a58-d0f6-d384-dea1fe95f0a5": {
+      "uuid": "051e29eb-4a58-d0f6-d384-dea1fe95f0a5",
+      "name": "When Bunnies Attack Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/051e29eb-4a58-d0f6-d384-dea1fe95f0a5/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/051e29eb-4a58-d0f6-d384-dea1fe95f0a5/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/051e29eb-4a58-d0f6-d384-dea1fe95f0a5/largeart.png"
+      }
+    },
+    "ec50c37c-455a-ae63-353f-c399f36e55d6": {
+      "uuid": "ec50c37c-455a-ae63-353f-c399f36e55d6",
+      "name": "Penguin Precision Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/ec50c37c-455a-ae63-353f-c399f36e55d6/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/ec50c37c-455a-ae63-353f-c399f36e55d6/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/ec50c37c-455a-ae63-353f-c399f36e55d6/largeart.png"
+      }
+    },
+    "02c770d2-4234-9c57-51d8-a2a660241e7c": {
+      "uuid": "02c770d2-4234-9c57-51d8-a2a660241e7c",
+      "name": "Epilogue: Penguin Precision Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/02c770d2-4234-9c57-51d8-a2a660241e7c/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/02c770d2-4234-9c57-51d8-a2a660241e7c/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/02c770d2-4234-9c57-51d8-a2a660241e7c/largeart.png"
+      }
+    },
+    "5b5e2e23-4fc1-e8fe-cbbb-23a18f9b21fa": {
+      "uuid": "5b5e2e23-4fc1-e8fe-cbbb-23a18f9b21fa",
+      "name": "Warm Up // Maxbot Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/5b5e2e23-4fc1-e8fe-cbbb-23a18f9b21fa/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/5b5e2e23-4fc1-e8fe-cbbb-23a18f9b21fa/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/5b5e2e23-4fc1-e8fe-cbbb-23a18f9b21fa/largeart.png"
+      }
+    },
+    "6b2bf0c5-4bec-70f4-c63a-54b30a3c65bc": {
+      "uuid": "6b2bf0c5-4bec-70f4-c63a-54b30a3c65bc",
+      "name": "Yellows On Rails Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/6b2bf0c5-4bec-70f4-c63a-54b30a3c65bc/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/6b2bf0c5-4bec-70f4-c63a-54b30a3c65bc/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/6b2bf0c5-4bec-70f4-c63a-54b30a3c65bc/largeart.png"
       }
     },
     "bab9caaa-4913-2704-833e-8c89e2128eb9": {
@@ -7849,6 +8529,15 @@
         "large": "https://media.valorant-api.com/playercards/7a241692-4361-aec4-95cc-c0a700c9f2d9/largeart.png"
       }
     },
+    "4dce4142-44bf-32e5-6f51-7e905389502c": {
+      "uuid": "4dce4142-44bf-32e5-6f51-7e905389502c",
+      "name": "Pride // Mint Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/4dce4142-44bf-32e5-6f51-7e905389502c/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/4dce4142-44bf-32e5-6f51-7e905389502c/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/4dce4142-44bf-32e5-6f51-7e905389502c/largeart.png"
+      }
+    },
     "99bdfb9b-4ee9-a057-5b62-b2ae6309abf8": {
       "uuid": "99bdfb9b-4ee9-a057-5b62-b2ae6309abf8",
       "name": "Art of Greatness // Unbreakable Card",
@@ -7883,6 +8572,15 @@
         "small": "https://media.valorant-api.com/playercards/cada2e3f-4b1d-8279-3e1a-49984a71d4d3/smallart.png",
         "wide": "https://media.valorant-api.com/playercards/cada2e3f-4b1d-8279-3e1a-49984a71d4d3/wideart.png",
         "large": "https://media.valorant-api.com/playercards/cada2e3f-4b1d-8279-3e1a-49984a71d4d3/largeart.png"
+      }
+    },
+    "39729022-445a-d7bb-52e7-9e909e481db2": {
+      "uuid": "39729022-445a-d7bb-52e7-9e909e481db2",
+      "name": "RGX 11z Pro, Ep 4 Card",
+      "icons": {
+        "small": "https://media.valorant-api.com/playercards/39729022-445a-d7bb-52e7-9e909e481db2/smallart.png",
+        "wide": "https://media.valorant-api.com/playercards/39729022-445a-d7bb-52e7-9e909e481db2/wideart.png",
+        "large": "https://media.valorant-api.com/playercards/39729022-445a-d7bb-52e7-9e909e481db2/largeart.png"
       }
     },
     "a89bd44e-4b47-7ce1-27a6-0189c1ad8c2f": {
@@ -8283,7 +8981,7 @@
     }
   },
   "titles": {
-    "version": "34A7755183AA5ED2",
+    "version": "151C966A92256B28",
     "48d870a2-4493-ebf8-7d6f-979be914dc43": {
       "uuid": "48d870a2-4493-ebf8-7d6f-979be914dc43",
       "name": "Fortune Title",
@@ -8323,6 +9021,16 @@
       "uuid": "5dc79611-42f8-24ad-9f5d-6d8288a7fe9a",
       "name": "Spicy Title",
       "text": "Spicy"
+    },
+    "9e6f13d8-49f3-db30-76bd-e69a0dba963e": {
+      "uuid": "9e6f13d8-49f3-db30-76bd-e69a0dba963e",
+      "name": "Bounty Hunter Title",
+      "text": "Bounty Hunter"
+    },
+    "daae405e-4fc7-0c3a-0ab6-08bebca1a8dc": {
+      "uuid": "daae405e-4fc7-0c3a-0ab6-08bebca1a8dc",
+      "name": "Living Nightmare Title",
+      "text": "Living Nightmare"
     },
     "703cd95a-4624-16f3-fdd9-f4a881993577": {
       "uuid": "703cd95a-4624-16f3-fdd9-f4a881993577",
@@ -8473,6 +9181,21 @@
       "uuid": "810b90a3-4399-1f96-9e86-ce853c932156",
       "name": "Goinmul Title",
       "text": "Goinmul"
+    },
+    "93a2544e-4f3e-2914-0d38-00a58345ffd9": {
+      "uuid": "93a2544e-4f3e-2914-0d38-00a58345ffd9",
+      "name": "Chalked Title",
+      "text": "Chalked"
+    },
+    "5b3510f1-49ac-dc6e-2158-bbbd09e071d1": {
+      "uuid": "5b3510f1-49ac-dc6e-2158-bbbd09e071d1",
+      "name": "Finest Title",
+      "text": "Finest"
+    },
+    "39374ca0-447b-1d4e-aa38-e6b0e0b07946": {
+      "uuid": "39374ca0-447b-1d4e-aa38-e6b0e0b07946",
+      "name": "No Scope Title",
+      "text": "No Scope"
     },
     "631f4283-48b1-1855-d646-5e8f80e29821": {
       "uuid": "631f4283-48b1-1855-d646-5e8f80e29821",
@@ -8749,10 +9472,15 @@
       "name": "VCT Masters Reykjavik Winner Title",
       "text": "VCT Masters Reykjavik Winner"
     },
+    "d9c1a80f-4531-8c05-9841-4aafd417df8c": {
+      "uuid": "d9c1a80f-4531-8c05-9841-4aafd417df8c",
+      "name": "VCT Masters Reykjavik Winner Title",
+      "text": "VCT Masters Reykjavik Winner"
+    },
     "f0751060-4d86-39e8-b881-469f52058b3f": {
       "uuid": "f0751060-4d86-39e8-b881-469f52058b3f",
-      "name": "2021 VCT Masters Winner",
-      "text": "2021 VCT Masters Winner"
+      "name": "VCT Regional Masters Winner",
+      "text": "VCT Regional Masters Winner"
     },
     "d11e42f8-45e9-7d71-720b-8c9c54c3b808": {
       "uuid": "d11e42f8-45e9-7d71-720b-8c9c54c3b808",
