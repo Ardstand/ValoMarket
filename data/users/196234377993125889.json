@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "id": "196234377993125889",
+      "puuid": "a6d60cce-b683-5ceb-b973-826d96924b70",
+      "auth": null,
+      "alerts": [],
+      "username": "CodinGlitch#CoDev",
+      "region": "ap",
+      "authFailures": 0
+    }
+  ],
+  "currentAccount": 1,
+  "settings": {
+    "hideIgn": false,
+    "privateShop": false
+  }
+}

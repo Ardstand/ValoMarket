@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "id": "307497092430168076",
+      "puuid": "4052e64c-9b9a-53aa-ae20-dea16f0cb2b5",
+      "auth": null,
+      "alerts": [],
+      "username": "zen#vinkx",
+      "region": "ap",
+      "authFailures": 0
+    }
+  ],
+  "currentAccount": 1,
+  "settings": {
+    "hideIgn": false,
+    "privateShop": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "id": "948504678935715880",
+      "puuid": "f595e5f5-df00-57a9-89dc-f4c3ccdec591",
+      "auth": null,
+      "alerts": [],
+      "username": "null#null",
+      "region": "ap",
+      "authFailures": 0
+    }
+  ],
+  "currentAccount": 1,
+  "settings": {
+    "hideIgn": false,
+    "privateShop": false
+  }
+}

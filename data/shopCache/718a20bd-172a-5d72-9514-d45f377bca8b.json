@@ -1,0 +1,59 @@
+{
+  "offers": {
+    "offers": [
+      "d547c575-4572-9d77-42e5-bea022e5f07b",
+      "7d3c0ac4-42ce-7111-2c86-43be3d2e86a7",
+      "258f4b78-4286-a93b-309a-0bada49c06e1",
+      "68ee5c6c-4424-e95a-f46f-c08ec2dfeb97"
+    ],
+    "expires": 1659311922
+  },
+  "bundles": [
+    {
+      "uuid": "a6fa35c6-4205-d5bc-dd65-3b92aeaac412",
+      "expires": 1660165122
+    }
+  ],
+  "night_market": {
+    "offers": [
+      {
+        "uuid": "bf6df430-4e46-5c51-df6f-c2bc3b1cb4fe",
+        "realPrice": 1775,
+        "nmPrice": 1190,
+        "percent": 33
+      },
+      {
+        "uuid": "1fdbe6f8-42ca-deb2-33da-caa2c4200544",
+        "realPrice": 1275,
+        "nmPrice": 880,
+        "percent": 31
+      },
+      {
+        "uuid": "deb200a8-447c-0e47-5b92-e8aeb9cd5525",
+        "realPrice": 1775,
+        "nmPrice": 1172,
+        "percent": 34
+      },
+      {
+        "uuid": "c1326ee3-47af-d823-6686-618e1bcdf0c6",
+        "realPrice": 3550,
+        "nmPrice": 3160,
+        "percent": 11
+      },
+      {
+        "uuid": "f2a7150b-4894-0dc8-53b3-bf9a30fa4ea4",
+        "realPrice": 1275,
+        "nmPrice": 931,
+        "percent": 27
+      },
+      {
+        "uuid": "7d43477d-465a-67fc-561e-f2a2ebea697d",
+        "realPrice": 875,
+        "nmPrice": 762,
+        "percent": 13
+      }
+    ],
+    "expires": 1659484722
+  },
+  "timestamp": 1659243964944
+}
