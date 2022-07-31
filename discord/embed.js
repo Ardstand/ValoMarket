@@ -74,7 +74,7 @@ export const skinChosenEmbed = async (interaction, skin) => {
     return {
         description: description,
         color: VAL_COLOR_1,
-        thumbnail: {
+        image: {
             url: skin.icon
         }
     }
@@ -136,7 +136,7 @@ export const renderBundles = async (bundles, interaction, VPemoji) => {
             title: s(interaction).info.BUNDLE_NAME.f({b: l(bundle.names, interaction)}),
             description: `${subName}${slantedDescription}${emojiString} **${bundle.price || s(interaction).info.FREE}** - ${s(interaction).info.EXPIRES.f({t:bundle.expires})}`,
             color: VAL_COLOR_2,
-            thumbnail: {
+            image: {
                 url: bundle.icon
             }
         };
@@ -306,7 +306,7 @@ const skinEmbed = async (uuid, price, interaction, VPemojiString) => {
         url: config.linkItemImage ? skin.icon : null,
         description: priceDescription(VPemojiString, price),
         color: VAL_COLOR_2,
-        thumbnail: {
+        image: {
             url: skin.icon
         }
     };
@@ -319,7 +319,7 @@ const buddyEmbed = async (uuid, price, locale, VPemojiString) => {
         url: config.linkItemImage ? buddy.icon : null,
         description: priceDescription(VPemojiString, price),
         color: VAL_COLOR_2,
-        thumbnail: {
+        image: {
             url: buddy.icon
         }
     }
@@ -332,7 +332,7 @@ const cardEmbed = async (uuid, price, locale, VPemojiString) => {
         url: config.linkItemImage ? card.icons.large : null,
         description: priceDescription(VPemojiString, price),
         color: VAL_COLOR_2,
-        thumbnail: {
+        image: {
             url: card.icons.large
         }
     }
@@ -345,7 +345,7 @@ const sprayEmbed = async (uuid, price, locale, VPemojiString) => {
         url: config.linkItemImage ? spray.icon : null,
         description: priceDescription(VPemojiString, price),
         color: VAL_COLOR_2,
-        thumbnail: {
+        image: {
             url: spray.icon
         }
     }
@@ -482,7 +482,7 @@ export const alertsPageEmbed = async (interaction, alerts, pageIndex, emojiStrin
                 title: s(interaction).info.ONE_ALERT,
                 color: VAL_COLOR_1,
                 description: `**${await skinNameAndEmoji(skin, interaction.channel, interaction.locale)}**\n${await alertFieldDescription(interaction, alert.channel_id, emojiString, skin.price)}`,
-                thumbnail: {
+                image: {
                     url: skin.icon
                 }
             }],
@@ -586,7 +586,7 @@ export const statsForSkinEmbed = async (skin, stats, interaction) => {
         title: await skinNameAndEmoji(skin, interaction.channel, interaction.locale),
         description: description,
         color: VAL_COLOR_2,
-        thumbnail: {
+        image: {
             url: skin.icon
         }
     }
