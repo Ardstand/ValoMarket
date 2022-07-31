@@ -224,7 +224,7 @@ export const renderBattlepass = async (battlepass, targetlevel, interaction, val
     if(battlepass.bpdata.progressionLevelReached < 55) {
         embeds.push({
             title: s(interaction).battlepass.CALCULATIONS_TITLE,
-            thumbnail: {url: thumbnails[Math.floor(Math.random()*thumbnails.length)]},
+            //thumbnail: {url: thumbnails[Math.floor(Math.random()*thumbnails.length)]},
             description: `${s(interaction).battlepass.TIER_HEADER.f({u: valorantUser.username}, interaction)}\n${createProgressBar(battlepass.xpneeded, battlepass.bpdata.progressionTowardsNextLevel, battlepass.bpdata.progressionLevelReached)}`,
             color: VAL_COLOR_1,
             fields: [

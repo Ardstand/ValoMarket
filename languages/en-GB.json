@@ -93,15 +93,15 @@
     "ACCOUNT_SWITCHED": "Switched to account number **{n}. {u}**",
     "ACCOUNTS_HEADER": "All your accounts with the bot:",
     "ACCOUNT_CURRENTLY_SELECTED": "[Currently selected]",
-    "SWITCH_ACCOUNT_BUTTON": "Account #{n}",
+    "SWITCH_ACCOUNT_BUTTON": "{u}",
     "LOADING": "Loading...",
     "HIDDEN_USERNAME": "username hidden",
     "NO_USERNAME": "[No username]",
     "UNHANDLED_COMMAND": "Unhandled command"
   },
   "battlepass": {
-    "CALCULATIONS_TITLE": "\uD83D\uDCC8 Battlepass Calculation",
-    "FINISHED": "\uD83C\uDF89 Congratulations, you've finished the battlepass!",
+    "CALCULATIONS_TITLE": "Battlepass Details",
+    "FINISHED": "Congratulations, you've finished the battlepass!",
     "TIER_HEADER": "**{u}**'s battlepass tier:",
     "GENERAL_COL": "General",
     "XP_COL": "XP",
