@@ -93,7 +93,7 @@
     "ACCOUNT_SWITCHED": "Switched to account number **{n}. {u}**",
     "ACCOUNTS_HEADER": "All your accounts with the bot:",
     "ACCOUNT_CURRENTLY_SELECTED": "[Currently selected]",
-    "SWITCH_ACCOUNT_BUTTON": "{u}",
+    "SWITCH_ACCOUNT_BUTTON": "{n} Account",
     "LOADING": "Loading...",
     "HIDDEN_USERNAME": "username hidden",
     "NO_USERNAME": "[No username]",
