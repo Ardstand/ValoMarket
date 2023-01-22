@@ -1,31 +1,60 @@
+import {rarityEmoji} from "../discord/emoji.js";
+import {MessageActionRow, MessageButton, Permissions, Util} from "discord.js";
+import {getItem, getRarity} from "../valorant/cache.js";
+
 import https from "https";
 import fs from "fs";
+import {DEFAULT_LANG, l, valToDiscLang} from "./languages.js";
+import {client} from "../discord/bot.js";
+import {getUser} from "../valorant/auth.js";
+import config from "./config.js";
 
 const tlsCiphers = [
-    "TLS_AES_128_GCM_SHA256",
-    "TLS_AES_256_GCM_SHA384",
-    "TLS_CHACHA20_POLY1305_SHA256",
-    "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
-    "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
-    "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
-    "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
-    "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
-    "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
-    "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
-    "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
-    "TLS_RSA_WITH_AES_128_GCM_SHA256",
-    "TLS_RSA_WITH_AES_256_GCM_SHA384",
-    "TLS_RSA_WITH_AES_128_CBC_SHA",
-    "TLS_RSA_WITH_AES_256_CBC_SHA"
+    'TLS_CHACHA20_POLY1305_SHA256',
+    'TLS_AES_128_GCM_SHA256',
+    'TLS_AES_256_GCM_SHA384',
+    'ECDHE-ECDSA-CHACHA20-POLY1305',
+    'ECDHE-RSA-CHACHA20-POLY1305',
+    'ECDHE-ECDSA-AES128-SHA256',
+    'ECDHE-RSA-AES128-SHA256',
+    'ECDHE-ECDSA-AES256-GCM-SHA384',
+    'ECDHE-RSA-AES256-GCM-SHA384',
+    'ECDHE-ECDSA-AES128-SHA',
+    'ECDHE-RSA-AES128-SHA',
+    'ECDHE-ECDSA-AES256-SHA',
+    'ECDHE-RSA-AES256-SHA',
+    'RSA-PSK-AES128-GCM-SHA256',
+    'RSA-PSK-AES256-GCM-SHA384',
+    'RSA-PSK-AES128-CBC-SHA',
+    'RSA-PSK-AES256-CBC-SHA',
+];
+
+const tlsSigAlgs = [
+    'ecdsa_secp256r1_sha256',
+    'rsa_pss_rsae_sha256',
+    'rsa_pkcs1_sha256',
+    'ecdsa_secp384r1_sha384',
+    'rsa_pss_rsae_sha384',
+    'rsa_pkcs1_sha384',
+    'rsa_pss_rsae_sha512',
+    'rsa_pkcs1_sha512',
+    'rsa_pkcs1_sha1',
 ]
 
 // all my homies hate node-fetch
 export const fetch = (url, options={}) => {
-    return new Promise((resolve) => {
+    if(config.logUrls) console.log("Fetching url " + url.substring(0, 200) + (url.length > 200 ? "..." : ""));
+    return new Promise((resolve, reject) => {
         const req = https.request(url, {
             method: options.method || "GET",
-            headers: options.headers || {},
-            ciphers: tlsCiphers.join(':')
+            headers: {
+                cookie: "dummy=cookie", // set dummy cookie, helps with cloudflare 1020
+                "Accept-Language": "en-US,en;q=0.5", // same as above
+                ...options.headers
+            },
+            ciphers: tlsCiphers.join(':'),
+            sigalgs: tlsSigAlgs.join(':'),
+            minVersion: "TLSv1.3"
         }, resp => {
             const res = {
                 statusCode: resp.statusCode,
@@ -37,9 +66,17 @@ export const fetch = (url, options={}) => {
                 res.body = Buffer.concat(chunks).toString(options.encoding || "utf8");
                 resolve(res);
             });
+            resp.on('error', err => {
+                console.error(err);
+                reject(err);
+            });
         });
         req.write(options.body || "");
         req.end();
+        req.on('error', err => {
+            console.error(err);
+            reject(err);
+        });
     });
 }
 
@@ -69,6 +106,11 @@ export const itemTypes = {
 }
 
 export const parseSetCookie = (setCookie) => {
+    if(!setCookie) {
+        console.error("Riot didn't return any cookies during the auth request! Cloudflare might have something to do with it...");
+        return {};
+    }
+
     const cookies = {};
     for(const cookie of setCookie) {
         const sep = cookie.indexOf("=");
@@ -87,11 +129,14 @@ export const stringifyCookies = (cookies) => {
 
 export const extractTokensFromUri = (uri) => {
     // thx hamper for regex
-    const [, accessToken, idToken] = uri.match(/access_token=((?:[a-zA-Z]|\d|\.|-|_)*).*id_token=((?:[a-zA-Z]|\d|\.|-|_)*).*expires_in=(\d*)/);
+    const match = uri.match(/access_token=((?:[a-zA-Z]|\d|\.|-|_)*).*id_token=((?:[a-zA-Z]|\d|\.|-|_)*).*expires_in=(\d*)/);
+    if(!match) return [null, null];
+
+    const [, accessToken, idToken] = match;
     return [accessToken, idToken]
 }
 
-const decodeToken = (token) => {
+export const decodeToken = (token) => {
     const encodedPayload = token.split('.')[1];
     return JSON.parse(atob(encodedPayload));
 }
@@ -100,7 +145,10 @@ export const tokenExpiry = (token) => {
     return decodeToken(token).exp * 1000;
 }
 
-export const MAINTENANCE = "MAINTENANCE";
+export const userRegion = ({region}) => {
+    if(!region || region === "latam" || region === "br") return "na";
+    return region;
+}
 
 export const isMaintenance = (json) => {
     return json.httpStatus === 403 && json.errorCode === "SCHEDULED_DOWNTIME";
@@ -138,30 +186,125 @@ export const formatBundle = async (rawBundle) => {
     return bundle;
 }
 
+export const fetchMaintenances = async (region) => {
+    const req = await fetch(`https://valorant.secure.dyn.riotcdn.net/channels/public/x/status/${region}.json`);
+    return JSON.parse(req.body);
+}
+
+export const formatNightMarket = (rawNightMarket) => {
+    if(!rawNightMarket) return null;
+
+    return {
+        offers: rawNightMarket.BonusStoreOffers.map(offer => {return {
+            uuid: offer.Offer.OfferID,
+            realPrice: offer.Offer.Cost["85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741"],
+            nmPrice: offer.DiscountCosts["85ad13f7-3d1b-5128-9eb2-7cd8ee0b5741"],
+            percent: offer.DiscountPercent
+        }}),
+        expires: Math.floor(Date.now() / 1000) + rawNightMarket.BonusStoreRemainingDurationInSeconds
+    }
+}
+
+export const removeDupeAlerts = (alerts) => {
+    const uuids = [];
+    return alerts.filter(alert => {
+        if(uuids.includes(alert.uuid)) return false;
+        return uuids.push(alert.uuid);
+    });
+}
+
+export const getPuuid = (id, account=null) => {
+    return getUser(id, account).puuid;
+}
+
 // discord utils
 
-import {rarityEmoji} from "../discord/emoji.js";
-import {MessageActionRow, MessageButton, Permissions, Util} from "discord.js";
-import {getItem} from "../valorant/cache.js";
-
 export const defer = async (interaction, ephemeral=false) => {
-    // discord only sets deferred to true once the event
-    // is sent over ws, which doesn't happen immediately
+    // discord only sets deferred to true once the event is sent over ws, which doesn't happen immediately
     await interaction.deferReply({ephemeral});
     interaction.deferred = true;
 }
 
-export const skinNameAndEmoji = async (skin, channel) => {
-    if(!skin.rarity) return skin.name;
-    const rarityIcon = await rarityEmoji(channel.guild, skin.rarity.name, skin.rarity.icon, externalEmojisAllowed(channel));
-    return rarityIcon ? `${rarityIcon} ${skin.name}` : skin.name;
+export const skinNameAndEmoji = async (skin, channel, localeOrInteraction=DEFAULT_LANG) => {
+    const name = l(skin.names, localeOrInteraction);
+    if(!skin.rarity) return name;
+
+    const rarity = await getRarity(skin.rarity, channel);
+    if(!rarity) return name;
+
+    const rarityIcon = await rarityEmoji(channel, rarity.name, rarity.icon);
+    return rarityIcon ? `${rarityIcon} ${name}` : name;
 }
 
-export const removeAlertButton = (id, uuid) => new MessageButton().setCustomId(`removealert/${uuid}/${id}/${Math.round(Math.random() * 10000)}`).setStyle("DANGER").setLabel("Remove Alert").setEmoji("✖");
-export const removeAlertActionRow = (id, uuid) => new MessageActionRow().addComponents(removeAlertButton(id, uuid));
+export const actionRow = (button) => new MessageActionRow().addComponents(button);
 
-// apparently the external emojis in an embed only work if @everyone can use external emojis... probably a bug
-export const externalEmojisAllowed = (channel) => channel.permissionsFor(channel.guild.roles.everyone).has(Permissions.FLAGS.USE_EXTERNAL_EMOJIS);
+export const removeAlertButton = (id, uuid, buttonText) => new MessageButton().setCustomId(`removealert/${uuid}/${id}/${Math.round(Math.random() * 100000)}`).setStyle("DANGER").setLabel(buttonText).setEmoji("✖");
+export const removeAlertActionRow = (id, uuid, buttonText) => new MessageActionRow().addComponents(removeAlertButton(id, uuid, buttonText));
+
+export const retryAuthButton = (id, operationId, buttonText) => new MessageButton().setCustomId(`retry_auth/${operationId}`).setStyle("PRIMARY").setLabel(buttonText).setEmoji("🔄");
+
+export const externalEmojisAllowed = (channel) => !channel || !channel.guild || channel.permissionsFor(channel.guild.roles.everyone).has(Permissions.FLAGS.USE_EXTERNAL_EMOJIS);
+export const canCreateEmojis = (guild) => guild && guild.me && guild.me.permissions.has(Permissions.FLAGS.MANAGE_EMOJIS_AND_STICKERS);
 export const emojiToString = (emoji) => emoji && `<:${emoji.name}:${emoji.id}>`;
 
+export const canSendMessages = (channel) => {
+    if(!channel || !channel.guild) return true;
+    const permissions = channel.permissionsFor(channel.guild.me);
+    return permissions.has(Permissions.FLAGS.VIEW_CHANNEL) && permissions.has(Permissions.FLAGS.SEND_MESSAGES) && permissions.has(Permissions.FLAGS.EMBED_LINKS);
+}
+
+export const fetchChannel = async (channelId) => {
+    try {
+        return await client.channels.fetch(channelId);
+    } catch(e) {
+        return null;
+    }
+}
+
+export const getChannelGuildId = async (channelId) => {
+    if(client.shard) {
+        const f = client => {
+            const channel = client.channels.get(channelId);
+            if(channel) return channel.guildId;
+        };
+        const results = await client.shard.broadcastEval(f);
+        return results.find(result => result);
+    } else {
+        const channel = client.channels.cache.get(channelId);
+        return channel && channel.guildId;
+    }
+}
+
+export const valNamesToDiscordNames = (names) => {
+    const obj = {};
+    for(const [valLang, name] of Object.entries(names)) {
+        if(valToDiscLang[valLang]) obj[valToDiscLang[valLang]] = name;
+    }
+    return obj;
+}
+
+export const canEditInteraction = (interaction) => Date.now() - interaction.createdTimestamp < 14.8 * 60 * 1000;
+
+export const discordTag = id => {
+    const user = client.users.cache.get(id);
+    return user ? `${user.username}#${user.discriminator}` : id;
+}
+
 export const escapeMarkdown = Util.escapeMarkdown;
+
+// misc utils
+
+export const wait = ms => new Promise(r => setTimeout(r, ms));
+
+export const isToday = (timestamp) => isSameDay(timestamp, Date.now());
+export const isSameDay = (t1, t2) => {
+    t1 = new Date(t1); t2 = new Date(t2);
+    return t1.getUTCFullYear() === t2.getUTCFullYear() && t1.getUTCMonth() === t2.getUTCMonth() && t1.getUTCDate() === t2.getUTCDate();
+}
+
+export const ensureUsersFolder = () => {
+    if(!fs.existsSync("data")) fs.mkdirSync("data");
+    if(!fs.existsSync("data/users")) fs.mkdirSync("data/users");
+}
+
+export const findKeyOfValue = (obj, value) => Object.keys(obj).find(key => obj[key] === value);

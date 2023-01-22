@@ -17,7 +17,7 @@ import {
     allStatsEmbed,
     accountsListEmbed, switchAccountButtons
 } from "./embed.js";
-import {authUser, getUser, getUserList, setUserLocale,} from "../valorant/auth.js";
+import {authUser, getUser, getUserList,} from "../valorant/auth.js";
 import {getBalance} from "../valorant/shop.js";
 import {getSkin, fetchData, searchSkin, searchBundle, getBundle} from "../valorant/cache.js";
 import {addAlert, alertExists, alertsPerChannelPerGuild, checkAlerts, filteredAlertsForUser, removeAlert, testAlerts} from "./alerts.js";

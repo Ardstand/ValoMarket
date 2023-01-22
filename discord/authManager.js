@@ -1,20 +1,24 @@
 import {getAuthQueueItemStatus, Operations, queue2FACodeRedeem, queueUsernamePasswordLogin} from "../valorant/authQueue.js";
 import {actionRow, retryAuthButton, wait} from "../misc/util.js";
-import {getUser, setUserLocale} from "../valorant/auth.js";
+import {getUser} from "../valorant/auth.js";
 import {authFailureMessage, basicEmbed} from "./embed.js";
 import {s} from "../misc/languages.js";
 import config from "../misc/config.js";
 
 let failedOperations = [];
 
+export const waitForAuthQueueResponse = async (queueResponse, pollRate=150) => {
+    if(!queueResponse.inQueue) return queueResponse;
+    while(true) {
+        let response = getAuthQueueItemStatus(queueResponse.c);
+        if(response.processed) return response.result;
+        await wait(pollRate);
+    }
+}
+
 export const loginUsernamePassword = async (interaction, username, password, operationIndex=null) => {
     let login = await queueUsernamePasswordLogin(interaction.user.id, username, password);
-
-    while(login.inQueue) {
-        const queueStatus = getAuthQueueItemStatus(login.c);
-        if(queueStatus.processed) login = queueStatus.result;
-        else await wait(150);
-    }
+    if(login.inQueue) login = await waitForAuthQueueResponse(login);
 
     const user = getUser(interaction.user.id);
     if(login.success && user) {
@@ -23,7 +27,6 @@ export const loginUsernamePassword = async (interaction, username, password, ope
             embeds: [basicEmbed(s(interaction).info.LOGGED_IN.f({u: user.username}, interaction))],
             ephemeral: true
         });
-        setUserLocale(user, interaction.locale);
 
         if(operationIndex !== null) {
             const index = failedOperations.findIndex(o => o.index === operationIndex);
@@ -47,26 +50,20 @@ export const loginUsernamePassword = async (interaction, username, password, ope
         });
     } else {
         console.log(`${interaction.user.tag} login error`);
-        await interaction.followUp(authFailureMessage(interaction, login, s(interaction).error.INVALID_PASSWORD));
+        await interaction.followUp(authFailureMessage(interaction, login, s(interaction).error.INVALID_PASSWORD, true));
     }
 }
 
 export const login2FA = async (interaction, code, operationIndex=null) => {
     let login = await queue2FACodeRedeem(interaction.user.id, code);
-
-    while(login.inQueue) {
-        const queueStatus = getAuthQueueItemStatus(login.c);
-        if(queueStatus.processed) login = queueStatus.result;
-        else await wait(150);
-    }
+    if(login.inQueue) login = await waitForAuthQueueResponse(login);
 
     const user = getUser(interaction.user.id);
     if(login.success && user) {
         console.log(`${interaction.user.tag} logged in as ${user.username} with 2FA code`);
         await interaction.followUp({
-            embeds: [basicEmbed(s(interaction).info.LOGGED_IN.f({u: user.username}, interaction))]
+            embeds: [basicEmbed(s(interaction).info.LOGGED_IN.f({u: user.username}))]
         });
-        setUserLocale(user, interaction.locale);
     } else if(login.error) {
         console.error(`${interaction.user.tag} 2FA error`);
         console.error(login.error);
@@ -85,9 +82,7 @@ export const login2FA = async (interaction, code, operationIndex=null) => {
         });
     } else {
         console.log(`${interaction.user.tag} 2FA code failed`);
-        await interaction.followUp({
-            embeds: [basicEmbed(s(interaction).error.INVALID_2FA)]
-        });
+        await interaction.followUp(authFailureMessage(interaction, login, s(interaction).error.INVALID_2FA, true));
     }
 }
 

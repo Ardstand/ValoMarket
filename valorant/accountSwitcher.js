@@ -1,5 +1,5 @@
 import fs from "fs";
-import {removeDupeAlerts} from "../misc/util.js";
+import {ensureUsersFolder, removeDupeAlerts} from "../misc/util.js";
 import {defaultSettings} from "../misc/settings.js";
 
 /** JSON format:
@@ -32,11 +32,13 @@ export const getUserJson = (id, account=null) => {
         return userJson.accounts[account || 1];
     }
 
-    return user.accounts[(account || user.currentAccount) - 1];
+    account = account || user.currentAccount || 1;
+    if(account > user.accounts.length) account = 1;
+    return user.accounts[account - 1];
 }
 
 export const saveUserJson = (id, json) => {
-    if(!fs.existsSync("data/users")) fs.mkdirSync("data/users");
+    ensureUsersFolder();
     fs.writeFileSync("data/users/" + id + ".json", JSON.stringify(json, null, 2));
 }
 
@@ -125,3 +127,35 @@ export const switchAccount = (id, accountNumber) => {
     return userJson.accounts[accountNumber - 1];
 }
 
+export const getAccountWithPuuid = (id, puuid) => {
+    const userJson = readUserJson(id);
+    if(!userJson) return null;
+    return userJson.accounts.find(a => a.puuid === puuid);
+}
+
+export const findTargetAccountIndex = (id, query) => {
+    const userJson = readUserJson(id);
+    if(!userJson) return null;
+
+    let index = userJson.accounts.findIndex(a => a.username === query || a.puuid === query);
+    if(index !== -1) return index + 1;
+
+    return parseInt(query) || null;
+}
+
+export const removeDupeAccounts = (id, json=readUserJson(id)) => {
+    const accounts = json.accounts;
+    const newAccounts = [];
+    for(let i = 0; i < accounts.length; i++) {
+        const existingAccount = newAccounts.find(a => a.puuid === accounts[i].puuid);
+        if(!existingAccount) newAccounts.push(accounts[i]);
+        else existingAccount.alerts = removeDupeAlerts(existingAccount.alerts.concat(accounts[i].alerts));
+    }
+
+    if(accounts.length !== newAccounts.length) {
+        json.accounts = newAccounts;
+        saveUserJson(id, json);
+    }
+
+    return json;
+}
