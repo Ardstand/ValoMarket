@@ -1,90 +1,167 @@
-import {removeAlertActionRow, skinNameAndEmoji} from "../misc/util.js";
-import {getUserList} from "../valorant/auth.js";
+import {
+    discordTag,
+    fetchChannel,
+    getChannelGuildId,
+    removeAlertActionRow,
+    removeDupeAlerts,
+    skinNameAndEmoji,
+    wait
+} from "../misc/util.js";
+import {deleteUserAuth, getUser, getUserList} from "../valorant/auth.js";
 import {getOffers} from "../valorant/shop.js";
 import {getSkin} from "../valorant/cache.js";
-import fs from "fs";
-import {VAL_COLOR_1} from "./embed.js";
+import {basicEmbed, VAL_COLOR_1} from "./embed.js";
+import {client} from "./bot.js";
+import config from "../misc/config.js";
+import {l, s} from "../misc/languages.js";
+import {readUserJson, saveUser} from "../valorant/accountSwitcher.js";
+import {sendShardMessage} from "../misc/shardMessage.js";
 
-let alerts = [];
-
-let client;
-export const setClient = (theClient) => client = theClient;
 
 /* Alert format: {
- *     id: discord user id
  *     uuid: skin uuid
  *     channel_id: discord text channel id the alert was sent in
  * }
- * There should only be one alert per ID/UUID pair, aka each user can have one alert per skin.
+ * Each user should have one alert per skin.
  */
 
-export const loadAlerts = (filename="data/alerts.json") => {
-    try {
-        alerts = JSON.parse(fs.readFileSync(filename).toString());
-        saveAlerts(filename);
-    } catch(e) {}
+export const addAlert = (id, alert) => {
+    const user = getUser(id);
+    if(!user) return;
+
+    user.alerts.push(alert);
+    saveUser(user);
 }
 
-const saveAlerts = (filename="data/alerts.json") => {
-    fs.writeFileSync(filename, JSON.stringify(alerts, null, 2));
-}
+export const alertsForUser = (id, account=null) => {
+    if(account === -1) { // -1 to get all alerts for user across accounts
+        const user = readUserJson(id);
+        if(!user) return [];
 
-export const addAlert = (alert) => {
-    alerts.push(alert);
-    saveAlerts();
+        return user.accounts.map(account => account.alerts).flat();
+    }
+
+    const user = getUser(id, account);
+    if(user) return user.alerts;
+    return [];
 }
 
 export const alertExists = (id, uuid) => {
-    return alerts.filter(alert => alert.id === id && alert.uuid === uuid)[0] || false;
+    return alertsForUser(id).find(alert => alert.uuid === uuid) || false;
 }
 
-export const alertsForUser = (id) => {
-    return alerts.filter(alert => alert.id === id);
+export const filteredAlertsForUser = async (interaction) => {
+    let alerts = alertsForUser(interaction.user.id);
+
+    // bring the alerts in this channel to the top
+    const alertPriority = (alert) => {
+        if(alert.channel_id === interaction.channelId) return 2;
+        const channel = client.channels.cache.get(alert.channel_id)
+        if(interaction.guild && channel && channel.client.channels.cache.get(alert.channel_id).guildId === interaction.guild.id) return 1;
+        return 0;
+    }
+    alerts.sort((alert1, alert2) => alertPriority(alert2) - alertPriority(alert1));
+
+    return alerts;
+}
+
+export const alertsPerChannelPerGuild = async () => {
+    const guilds = {};
+    for(const id of getUserList()) {
+        const alerts = alertsForUser(id, -1);
+        for(const alert of alerts) {
+            const guildId = await getChannelGuildId(alert.channel_id);
+
+            if(!(guildId in guilds)) guilds[guildId] = {};
+            if(!(alert.channel_id in guilds[guildId])) guilds[guildId][alert.channel_id] = 1;
+            else guilds[guildId][alert.channel_id]++;
+        }
+    }
+    return guilds;
 }
 
 export const removeAlert = (id, uuid) => {
-    const alertCount = alerts.length;
-    alerts = alerts.filter(alert => alert.id !== id || alert.uuid !== uuid);
-    saveAlerts();
-    return alertCount > alerts.length;
+    const user = getUser(id);
+    const alertCount = user.alerts.length;
+    user.alerts = user.alerts.filter(alert => alert.uuid !== uuid);
+    saveUser(user);
+    return alertCount > user.alerts.length;
 }
 
-export const removeAlertsFromUser = (id) => {
-    alerts = alerts.filter(alert => alert.id !== id);
-    saveAlerts();
-}
+export const checkAlerts = async () => {
+    if(client.shard && !client.shard.ids.includes(0)) return; // only run on the first shard
 
-export const removeAlertsInChannel = (channel_id) => {
-    alerts = alerts.filter(alert => alert.channel_id !== channel_id);
-    saveAlerts();
-}
-
-export const checkAlerts = () => {
-    if(!alerts) return;
-    console.debug("Checking new shop skins for alerts...");
+    console.log("Checking new shop skins for alerts...");
 
     try {
-        for(const id of getUserList()) {
-            const userAlerts = alerts.filter(alert => alert.id === id);
-            if(!userAlerts.length) continue;
+        let shouldWait = false;
 
-            getOffers(id).then(resp => {
-                if(!resp.success) {
-                    if(resp.maintenance) return; // retry in a few hours?
+        for(const id of getUserList()) {
+            try {
+                let credsExpiredAlerts = false;
+
+                const userJson = readUserJson(id);
+                if(!userJson) continue;
+
+                const accountCount = userJson.accounts.length;
+                for(let i = 1; i <= accountCount; i++) {
+
+                    const rawUserAlerts = alertsForUser(id, i);
+                    if(!rawUserAlerts || !rawUserAlerts.length) continue;
+
+                    if(shouldWait) {
+                        await wait(config.delayBetweenAlerts); // to prevent being ratelimited
+                        shouldWait = false;
+                    }
+
+                    const valorantUser = getUser(id, i);
+                    const discordUser = client.users.cache.get(id);
+                    const discordUsername = discordUser ? discordUser.username : id;
+                    console.log(`Checking user ${discordUsername}'s ${valorantUser.username} account (${i}/${accountCount}) for alerts...`);
+
+                    const userAlerts = removeDupeAlerts(rawUserAlerts);
+                    if(userAlerts.length !== rawUserAlerts.length) {
+                        valorantUser.alerts = userAlerts;
+                        saveUser(valorantUser, i);
+                    }
+
+                    const offers = await getOffers(id, i);
+                    shouldWait = valorantUser.auth && !offers.cached;
+
+                    if(!offers.success) {
+                        if(offers.maintenance) return; // retry in a few hours?
+
+                        if(!credsExpiredAlerts) {
+                            if(valorantUser.authFailures < config.authFailureStrikes) {
+                                valorantUser.authFailures++;
+                                credsExpiredAlerts = userAlerts;
+                            }
+                        }
+                        deleteUserAuth(valorantUser);
+                        continue;
+                    }
+
+                    const positiveAlerts = userAlerts.filter(alert => offers.offers.includes(alert.uuid));
+                    if(positiveAlerts.length) await sendAlert(id, i, positiveAlerts, offers.expires);
+                }
+
+                if(credsExpiredAlerts) {
+                    // user login is invalid
                     const channelsSent = [];
-                    for(const alert of alerts) {
+                    for(const alert of credsExpiredAlerts) {
                         if(!channelsSent.includes(alert.channel_id)) {
-                            sendCredentialsExpired(alert);
+                            await sendCredentialsExpired(id, alert);
                             channelsSent.push(alert.channel_id);
                         }
                     }
-                    return;
                 }
-
-                const positiveAlerts = userAlerts.filter(alert => resp.offers.includes(alert.uuid));
-                if(positiveAlerts.length) sendAlert(positiveAlerts, resp.expires);
-            });
+            } catch(e) {
+                console.error("There was an error while trying to fetch and send alerts for user " + discordTag(id));
+                console.error(e);
+            }
         }
+
+        console.log("Finished checking alerts!");
     } catch(e) {
         // should I send messages in the discord channels?
         console.error("There was an error while trying to send alerts!");
@@ -92,37 +169,46 @@ export const checkAlerts = () => {
     }
 }
 
-const sendAlert = async (alerts, expires) => {
-    console.debug(`Sending alerts...`);
+export const sendAlert = async (id, account, alerts, expires, tryOnOtherShard=true) => {
+    const user = client.users.cache.get(id);
+    const username = user ? user.username : id;
 
-    for(let i = 0; i < alerts.length; i++) {
-        let alert = alerts[i];
+    for(const alert of alerts) {
+        const valorantUser = getUser(id, account);
+        if(!valorantUser) return;
 
-        const channel = await client.channels.fetch(alert.channel_id).catch(() => {});
+        const channel = await fetchChannel(alert.channel_id);
         if(!channel) {
-            removeAlertsInChannel(alert.channel_id);
-            while(i < alerts.length && (i === alerts.length - 1 || alerts[i].channel_id === alerts[i+1].channel_id)) {
-                i++;
+            if(client.shard && tryOnOtherShard) {
+                sendShardMessage({
+                    type: "alert",
+                    alerts: [alert],
+                    id, account, expires
+                });
             }
             continue;
         }
 
+        console.log(`Sending alert for user ${username}...`);
+
         const skin = await getSkin(alert.uuid);
+        console.log(`User ${valorantUser.username} has the skin ${l(skin.names)} in their shop!`);
+
         await channel.send({
-            content: `<@${alert.id}>`,
+            content: `<@${id}>`,
             embeds: [{
-                description: `:tada: <@${alert.id}> The **${await skinNameAndEmoji(skin, channel)}** is in your daily shop!\nIt will be gone <t:${expires}:R>.`,
+                description: s(valorantUser.locale).info.ALERT_HAPPENED.f({i: id, u: valorantUser.username, s: await skinNameAndEmoji(skin, channel, valorantUser.locale), t: expires}, interaction),
                 color: VAL_COLOR_1,
                 thumbnail: {
                     url: skin.icon
                 }
             }],
-            components: [removeAlertActionRow(alert.id, alert.uuid)]
+            components: [removeAlertActionRow(id, alert.uuid, s(valorantUser.locale).info.REMOVE_ALERT_BUTTON)]
         }).catch(async e => {
             console.error(`Could not send alert message in #${channel.name}! Do I have the right role?`);
 
             try { // try to log the alert to the console
-                const user = await client.users.fetch(alert.id).catch(() => {});
+                const user = await client.users.fetch(id).catch(() => {});
                 if(user) console.error(`Please tell ${user.tag} that the ${skin.name} is in their item shop!`);
             } catch(e) {}
 
@@ -131,28 +217,60 @@ const sendAlert = async (alerts, expires) => {
     }
 }
 
-const sendCredentialsExpired = async (alert) => {
-    const channel = await client.channels.fetch(alert.channel_id).catch(() => {});
+export const sendCredentialsExpired = async (id, alert, tryOnOtherShard=true) => {
+    const channel = await fetchChannel(alert.channel_id);
     if(!channel) {
-        const user = await client.users.fetch(alert.id).catch(() => {});
-        if(user) console.error(`Please tell ${user.tag} that their credentials have expired, and that they should /login again.`)
-        return removeAlertsInChannel(alert.channel_id);
+        if(client.shard && tryOnOtherShard) {
+            sendShardMessage({
+                type: "alertCredentialsExpired",
+                id, alert
+            });
+            return;
+        }
+
+        const user = await client.users.fetch(id).catch(() => {});
+        if(user) console.error(`Please tell ${user.tag} that their credentials have expired, and that they should /login again. (I can't find the channel where the alert was set up)`);
+        return;
     }
 
+    if(channel.guild) {
+        const memberInGuild = await channel.guild.members.fetch(id).catch(() => {});
+        if(!memberInGuild) return; // the user is no longer in that guild
+    }
+
+    const valorantUser = getUser(id);
+    if(!valorantUser) return;
+
     await channel.send({
-        content: `<@${alert.id}>`,
+        content: `<@${id}>`,
         embeds: [{
-            description: `**<@${alert.id}> alerts couldnt be verified!** Relogging may fix the issue!`,
+            description: s(valorantUser.locale).error.AUTH_ERROR_ALERTS_HAPPENED.f({u: id}),
             color: VAL_COLOR_1,
         }]
     }).catch(async e => {
         console.error(`Could not send message in #${channel.name}! Do I have the right role?`);
 
         try { // try to log the alert to the console
-            const user = await client.users.fetch(alert.id).catch(() => {});
-            if(user) console.error(`Please tell ${user.tag} that their credentials have expired, and that they should /login again.`);
+            const user = await client.users.fetch(id).catch(() => {});
+            if(user) console.error(`Please tell ${user.tag} that their credentials have expired, and that they should /login again. Also tell them that they should fix their perms.`);
         } catch(e) {}
 
         console.error(e);
     });
+}
+
+export const testAlerts = async (interaction) => {
+    try {
+        const channel = interaction.channel || await fetchChannel(interaction.channel_id);
+        await channel.send({
+            embeds: [basicEmbed(s(interaction).info.ALERT_TEST)]
+        });
+        return true;
+    } catch(e) {
+        console.error(`${interaction.user.tag} tried to /testalerts, but failed!`);
+        if(e.code === 50013) console.error("Failed with 'Missing Access' error");
+        else if(e.code === 50001) console.error("Failed with 'Missing Permissions' error");
+        else console.error(e);
+        return false;
+    }
 }

@@ -2,35 +2,21 @@ import https from "https";
 import fs from "fs";
 
 const tlsCiphers = [
-    'TLS_CHACHA20_POLY1305_SHA256',
-    'TLS_AES_128_GCM_SHA256',
-    'TLS_AES_256_GCM_SHA384',
-    'ECDHE-ECDSA-CHACHA20-POLY1305',
-    'ECDHE-RSA-CHACHA20-POLY1305',
-    'ECDHE-ECDSA-AES128-SHA256',
-    'ECDHE-RSA-AES128-SHA256',
-    'ECDHE-ECDSA-AES256-GCM-SHA384',
-    'ECDHE-RSA-AES256-GCM-SHA384',
-    'ECDHE-ECDSA-AES128-SHA',
-    'ECDHE-RSA-AES128-SHA',
-    'ECDHE-ECDSA-AES256-SHA',
-    'ECDHE-RSA-AES256-SHA',
-    'RSA-PSK-AES128-GCM-SHA256',
-    'RSA-PSK-AES256-GCM-SHA384',
-    'RSA-PSK-AES128-CBC-SHA',
-    'RSA-PSK-AES256-CBC-SHA',
-]
-
-const tlsSigAlgs = [
-    'ecdsa_secp256r1_sha256',
-    'rsa_pss_rsae_sha256',
-    'rsa_pkcs1_sha256',
-    'ecdsa_secp384r1_sha384',
-    'rsa_pss_rsae_sha384',
-    'rsa_pkcs1_sha384',
-    'rsa_pss_rsae_sha512',
-    'rsa_pkcs1_sha512',
-    'rsa_pkcs1_sha1',
+    "TLS_AES_128_GCM_SHA256",
+    "TLS_AES_256_GCM_SHA384",
+    "TLS_CHACHA20_POLY1305_SHA256",
+    "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+    "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+    "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+    "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+    "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+    "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+    "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+    "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+    "TLS_RSA_WITH_AES_128_GCM_SHA256",
+    "TLS_RSA_WITH_AES_256_GCM_SHA384",
+    "TLS_RSA_WITH_AES_128_CBC_SHA",
+    "TLS_RSA_WITH_AES_256_CBC_SHA"
 ]
 
 // all my homies hate node-fetch
@@ -39,8 +25,7 @@ export const fetch = (url, options={}) => {
         const req = https.request(url, {
             method: options.method || "GET",
             headers: options.headers || {},
-            ciphers: tlsCiphers.join(':'),
-            sigalgs: tlsSigAlgs.join(':')
+            ciphers: tlsCiphers.join(':')
         }, resp => {
             const res = {
                 statusCode: resp.statusCode,

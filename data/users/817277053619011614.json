@@ -1,0 +1,32 @@
+{
+  "accounts": [
+    {
+      "id": "817277053619011614",
+      "puuid": "718a20bd-172a-5d72-9514-d45f377bca8b",
+      "auth": {
+        "cookies": {
+          "tdid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyYzFiOTIyLWFiNjEtNDA1Mi05ZjQ4LWRjMjFjNDA5NGVhYSIsIm5vbmNlIjoiL0Fwc1ZzTkc1Yjg9IiwiaWF0IjoxNjU5MjQ0MDM0fQ.oi5r6alcbhaFZKLa62JCqJaN6KxFabcOg3HGJFLw6uI",
+          "asid": "",
+          "clid": "as1",
+          "__cf_bm": "1qRb2DIaU88fgjO2fbEUWLalcevdWNFi1pp3uL4zONY-1659243970-0-AYBrWOGo6mOIQJs0Mvn3IlD4U6jpp61h8Poq8YNi3J98cZ1U7Ir50AMVcHKnko4+ACzxiItOJ6H8mEuuzJ7QAPs=",
+          "ssid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzc2lkIjoiQURZMi1hVkMxN2JNSWF2a1puSkdlUS5zWHh1MXdDLU1IN3hOek9kRVBobmhRIiwic3ViIjoiNzE4YTIwYmQtMTcyYS01ZDcyLTk1MTQtZDQ1ZjM3N2JjYThiIiwibG9naW5Ub2tlbiI6ImE1MTc5NGY4LWIxYjUtNGNmNS1iZTkzLTE1OGU4ODExNmVlMSIsInNlcmllc1Rva2VuIjoiOGM4YzBjNDUtNjU3Mi00MTVkLTkzMGUtNTIzZDc3NTFmNTRiIiwiaWF0IjoxNjU5MjQ0MDM1fQ.gNe6gyuP2fIMUdskJD1zIlVOuv3F7dCQilgegYYELdI",
+          "sub": "718a20bd-172a-5d72-9514-d45f377bca8b",
+          "csid": "ADY2-aVC17bMIavkZnJGeQ.sXxu1wC-MH7xNzOdEPhnhQ"
+        },
+        "rso": "eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJwcCI6eyJjIjpudWxsfSwic3ViIjoiNzE4YTIwYmQtMTcyYS01ZDcyLTk1MTQtZDQ1ZjM3N2JjYThiIiwic2NwIjpbImFjY291bnQiLCJvcGVuaWQiXSwiY2xtIjpbImVtYWlsX3ZlcmlmaWVkIiwib3BlbmlkIiwicHciLCJyZ25fRVVXMSIsInBob25lX251bWJlcl92ZXJpZmllZCIsImFjY3RfZ250IiwibG9jYWxlIiwiYWNjdCIsImFnZSIsImFjY291bnRfdmVyaWZpZWQiLCJhZmZpbml0eSJdLCJkYXQiOnsicCI6bnVsbCwiciI6IkVVVzEiLCJjIjoiYXMxIiwidSI6MjQ2MjA3MzAwODMzNTQ1NiwibGlkIjoiOWVtaHZVLTd2cXFEUnZNOFdGVlpxdyJ9LCJpc3MiOiJodHRwczpcL1wvYXV0aC5yaW90Z2FtZXMuY29tIiwiZXhwIjoxNjU5MjQ3NjM1LCJpYXQiOjE2NTkyNDQwMzUsImp0aSI6IjVYTWhtOU5wTXIwIiwiY2lkIjoicGxheS12YWxvcmFudC13ZWItcHJvZCJ9.LYTL9aHRnTxOwFVI9A5eXWaZ0MqURBjBYjhJJno91SvFoCX1zKHfkBcaZaCGXxWd_D2CdMJTe6wqrBi7aoMhsSXiuNxZbMLyLtcm0gIXYxPWddzwv2Zonk_lqTMdBjoDyyJeNrr0nWwBQw77kVOPDRPR8lsXBCjJVbbTT86e8z4",
+        "idt": "eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiMFF2R3ZucVdjQWNUOGZTVkx0ekItZyIsInN1YiI6IjcxOGEyMGJkLTE3MmEtNWQ3Mi05NTE0LWQ0NWYzNzdiY2E4YiIsImNvdW50cnkiOiJpbmQiLCJjb3VudHJ5X2F0IjoxNTg5MzgwOTk1MDAwLCJhbXIiOlsicGFzc3dvcmQiLCJtZmEiXSwiaXNzIjoiaHR0cHM6XC9cL2F1dGgucmlvdGdhbWVzLmNvbSIsImxvbCI6W3sidWlkIjoyNDYyMDczMDA4MzM1NDU2LCJjdWlkIjoyNDYyMDczMDA4MzM1NDU2LCJ1bmFtZSI6IkJsYXplNzEwNSIsImNwaWQiOiJFVVcxIiwicHRyaWQiOm51bGwsInBpZCI6IkVVVzEiLCJzdGF0ZSI6IkVOQUJMRUQifV0sIm5vbmNlIjoiMSIsImF1ZCI6InBsYXktdmFsb3JhbnQtd2ViLXByb2QiLCJhY3IiOiJ1cm46cmlvdDpnb2xkIiwicGxheWVyX2xvY2FsZSI6ImVuIiwiZXhwIjoxNjU5MzMwNDM1LCJpYXQiOjE2NTkyNDQwMzUsImFjY3QiOnsiZ2FtZV9uYW1lIjoiQXJkc3RhbmQiLCJ0YWdfbGluZSI6IjcxMDUifSwiYWdlIjoyMCwianRpIjoiYlJsczZxWUtaaWsiLCJsb2dpbl9jb3VudHJ5IjoiaW5kIn0.W2xJ2eZhu6mNJpCdoj6BTlqe4cbpiexgoAjD5ELvMpVara_j3mukZX989_YbZjQowg_vvFVcJE3VZrXz4at21j_Yo6CeiNc-3qKuXpoO3DGVMtD5nURIumLMaArIIwAAcUOETHhmClZjvJUGGjYCDGEW4sxyDDz17Nnlxp6HVic",
+        "ent": "eyJraWQiOiJrMSIsImFsZyI6IlJTMjU2In0.eyJlbnRpdGxlbWVudHMiOltdLCJhdF9oYXNoIjoiMFF2R3ZucVdjQWNUOGZTVkx0ekItZyIsInN1YiI6IjcxOGEyMGJkLTE3MmEtNWQ3Mi05NTE0LWQ0NWYzNzdiY2E4YiIsImlzcyI6Imh0dHBzOlwvXC9lbnRpdGxlbWVudHMuYXV0aC5yaW90Z2FtZXMuY29tIiwiaWF0IjoxNjU5MjQ0MDM1LCJqdGkiOiI1WE1obTlOcE1yMCJ9.c6snZC8uP6IGu8VHnybS7o6OXXkIoDLRgy_Vbh0coAKbzVb7PqJu-AG02DuEFiOPPA6pPBbK_mh4rJic9dqzoLr9kL0F74iIO52_atosrktq3AfsoR3rhmaNUY1Dx6G00joJLNxwG-WjmJ6lvNV7KHY3hHpaKXeNNWKg5mCkCdcWk6JDkM_M_UhvPanW9tFL6EPTjNz6ZLmM15WLYW63E2DkqAcEPp8OGUZoo1_BP3wJvqxt7-GXNP7WuX35OU2xV7SpnvAPJKRQoey9np_hagr7wVefJCj67Upn4ZjkgvydyyEojvPuP7kKmCze_NULkaFNnYkk_xy_n1G7jcGPCQ"
+      },
+      "alerts": [],
+      "username": "Ardstand#7105",
+      "region": "ap",
+      "locale": "en-US",
+      "authFailures": 0
+    }
+  ],
+  "currentAccount": 1,
+  "settings": {
+    "hideIgn": false,
+    "privateShop": false
+  }
+}

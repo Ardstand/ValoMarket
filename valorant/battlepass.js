@@ -1,15 +1,15 @@
-import { authUser, deleteUser, getUser } from "./auth.js";
-import { fetch, isMaintenance } from "../misc/util.js";
+import {authUser, deleteUserAuth, getUser} from "./auth.js";
+import {fetch, isMaintenance, userRegion} from "../misc/util.js";
 import { getValorantVersion } from "./cache.js";
 
-const CONTRACT_UUID = "c1cd8895-4bd2-466d-e7ff-b489e3bc3775";
-let AVERAGE_UNRATED_XP = 4200;
-let SPIKERUSH_XP = 1000;
+const CONTRACT_UUID = "99ac9283-4dd3-5248-2e01-8baf778affb4";
+const AVERAGE_UNRATED_XP_CONSTANT = 4200;
+const SPIKERUSH_XP_CONSTANT = 1000;
 const LEVEL_MULTIPLIER = 750;
-const SEASON_END = 'April 27, 2022'; // TODO fetch season end from API, maybe store that date to reduce calls?
+const SEASON_END = 'August 24, 2022'; // TODO fetch season end from API, maybe store that date to reduce calls?
 
 const getWeeklies = async () => {
-    console.debug("Fetching mission data...");
+    console.log("Fetching mission data...");
 
     const req = await fetch("https://valorant-api.com/v1/missions");
     console.assert(req.statusCode === 200, `Valorant mission status code is ${req.statusCode}!`, req);
@@ -51,13 +51,13 @@ export const getBattlepassProgress = async (id, maxlevel) => {
         return authSuccess;
 
     const user = getUser(id);
-    console.debug(`Fetching battlepass progress for ${user.username}...`);
+    console.log(`Fetching battlepass progress for ${user.username}...`);
 
     // https://github.com/techchrism/valorant-api-docs/blob/trunk/docs/Contracts/GET%20Contracts_Fetch.md
-    const req = await fetch(`https://pd.${user.region}.a.pvp.net/contracts/v1/contracts/${user.puuid}`, {
+    const req = await fetch(`https://pd.${userRegion(user)}.a.pvp.net/contracts/v1/contracts/${user.puuid}`, {
         headers: {
-            "Authorization": "Bearer " + user.rso,
-            "X-Riot-Entitlements-JWT": user.ent,
+            "Authorization": "Bearer " + user.auth.rso,
+            "X-Riot-Entitlements-JWT": user.auth.ent,
             "X-Riot-ClientVersion": (await getValorantVersion()).riotClientVersion
         }
     });
@@ -66,7 +66,7 @@ export const getBattlepassProgress = async (id, maxlevel) => {
 
     const json = JSON.parse(req.body);
     if (json.httpStatus === 400 && json.errorCode === "BAD_CLAIMS") {
-        deleteUser(id);
+        deleteUserAuth(user);
         return { success: false };
     } else if (isMaintenance(json))
         return { success: false, maintenance: true };
@@ -91,11 +91,14 @@ export const getBattlepassProgress = async (id, maxlevel) => {
     const weeklyxp = await getWeeklyXP(contractData.missions);
     const battlepassPurchased = await getBattlepassPurchase(id);
 
+    if(battlepassPurchased.success === false) // login failed
+        return battlepassPurchased;
+
     // Calculate
     const season_end = new Date(SEASON_END);
     const season_now = Date.now();
     const season_left = Math.abs(season_end - season_now);
-    const season_days_left = Math.floor(season_left / (1000 * 60 * 60 * 24)); // 1000 * 60 * 60 * 24 is one day in miliseconds
+    const season_days_left = Math.floor(season_left / (1000 * 60 * 60 * 24)); // 1000 * 60 * 60 * 24 is one day in milliseconds
     const season_weeks_left = season_days_left / 7;
 
     let totalxp = contractData.totalProgressionEarned;
@@ -106,23 +109,26 @@ export const getBattlepassProgress = async (id, maxlevel) => {
 
     totalxpneeded = totalxpneeded - totalxp;
 
+    let spikerush_xp = SPIKERUSH_XP_CONSTANT
+    let average_unrated_xp = AVERAGE_UNRATED_XP_CONSTANT
     if (battlepassPurchased) {
-        SPIKERUSH_XP = SPIKERUSH_XP * 1.03;
-        AVERAGE_UNRATED_XP = AVERAGE_UNRATED_XP * 1.03;
+        spikerush_xp = spikerush_xp * 1.03;
+        average_unrated_xp = average_unrated_xp * 1.03;
     }
 
     return {
         success: true,
         bpdata: contractData,
         battlepassPurchased: battlepassPurchased,
+        season_days_left: season_days_left,
         totalxp: totalxp.toLocaleString(),
         xpneeded: (await calculate_level_xp(contractData.progressionLevelReached + 1) - contractData.progressionTowardsNextLevel).toLocaleString(),
         totalxpneeded: Math.max(0, totalxpneeded).toLocaleString(),
         weeklyxp: weeklyxp.toLocaleString(),
-        spikerushneeded: Math.max(0, Math.ceil(totalxpneeded / SPIKERUSH_XP)).toLocaleString(),
-        normalneeded: Math.max(0, Math.ceil(totalxpneeded / AVERAGE_UNRATED_XP)).toLocaleString(),
-        spikerushneededwithweeklies: Math.max(0, Math.ceil((totalxpneeded - weeklyxp) / SPIKERUSH_XP)).toLocaleString(),
-        normalneededwithweeklies: Math.max(0, Math.ceil((totalxpneeded - weeklyxp) / AVERAGE_UNRATED_XP)).toLocaleString(),
+        spikerushneeded: Math.max(0, Math.ceil(totalxpneeded / spikerush_xp)).toLocaleString(),
+        normalneeded: Math.max(0, Math.ceil(totalxpneeded / average_unrated_xp)).toLocaleString(),
+        spikerushneededwithweeklies: Math.max(0, Math.ceil((totalxpneeded - weeklyxp) / spikerush_xp)).toLocaleString(),
+        normalneededwithweeklies: Math.max(0, Math.ceil((totalxpneeded - weeklyxp) / average_unrated_xp)).toLocaleString(),
         dailyxpneeded: Math.max(0, Math.ceil(totalxpneeded / season_days_left)).toLocaleString(),
         weeklyxpneeded: Math.max(0, Math.ceil(totalxpneeded / season_weeks_left)).toLocaleString(),
         dailyxpneededwithweeklies: Math.max(0, Math.ceil((totalxpneeded - weeklyxp) / season_days_left)).toLocaleString(),
@@ -168,13 +174,13 @@ const getBattlepassPurchase = async (id) => {
         return authSuccess;
 
     const user = getUser(id);
-    console.debug(`Fetching battlepass purchases for ${user.username}...`);
+    console.log(`Fetching battlepass purchases for ${user.username}...`);
 
     // https://github.com/techchrism/valorant-api-docs/blob/trunk/docs/Store/GET%20Store_GetEntitlements.md
-    const req = await fetch(`https://pd.${user.region}.a.pvp.net/store/v1/entitlements/${user.puuid}/f85cb6f7-33e5-4dc8-b609-ec7212301948`, {
+    const req = await fetch(`https://pd.${userRegion(user)}.a.pvp.net/store/v1/entitlements/${user.puuid}/f85cb6f7-33e5-4dc8-b609-ec7212301948`, {
         headers: {
-            "Authorization": "Bearer " + user.rso,
-            "X-Riot-Entitlements-JWT": user.ent
+            "Authorization": "Bearer " + user.auth.rso,
+            "X-Riot-Entitlements-JWT": user.auth.ent
         }
     });
 
@@ -182,7 +188,7 @@ const getBattlepassPurchase = async (id) => {
 
     const json = JSON.parse(req.body);
     if (json.httpStatus === 400 && json.errorCode === "BAD_CLAIMS") {
-        deleteUser(id);
+        deleteUserAuth(user);
         return { success: false };
     } else if (isMaintenance(json))
         return { success: false, maintenance: true };
@@ -192,7 +198,7 @@ const getBattlepassPurchase = async (id) => {
         if (entitlement.ItemID === CONTRACT_UUID) {
             return true;
         }
-    };
-    
+    }
+
     return false;
 }
