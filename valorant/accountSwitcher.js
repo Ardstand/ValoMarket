@@ -1,6 +1,5 @@
 import fs from "fs";
 import {ensureUsersFolder, removeDupeAlerts} from "../misc/util.js";
-import {defaultSettings} from "../misc/settings.js";
 
 /** JSON format:
  * {
@@ -25,8 +24,7 @@ export const getUserJson = (id, account=null) => {
     if(!user.accounts) {
         const userJson =  {
             accounts: [user],
-            currentAccount: 1,
-            settings: defaultSettings
+            currentAccount: 1
         }
         saveUserJson(id, userJson);
         return userJson.accounts[account || 1];
@@ -49,8 +47,7 @@ export const saveUser = (user, account=null) => {
     if(!userJson) {
         const objectToWrite = {
             accounts: [user],
-            currentAccount: 1,
-            settings: defaultSettings
+            currentAccount: 1
         }
         saveUserJson(user.id, objectToWrite);
     } else {
@@ -85,8 +82,7 @@ export const addUser = (user) => {
     } else {
         const objectToWrite = {
             accounts: [user],
-            currentAccount: 1,
-            settings: defaultSettings
+            currentAccount: 1
         }
         saveUserJson(user.id, objectToWrite);
     }

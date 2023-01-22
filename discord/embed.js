@@ -14,7 +14,6 @@ import {MessageActionRow, MessageButton} from "discord.js";
 import {getStatsFor} from "../misc/stats.js";
 import {getUser} from "../valorant/auth.js";
 import {readUserJson, saveUser} from "../valorant/accountSwitcher.js";
-import {getSetting, humanifyValue, settingName} from "../misc/settings.js";
 
 
 export const VAL_COLOR_1 = 0xFD4553;
@@ -593,12 +592,10 @@ export const statsForSkinEmbed = async (skin, stats, interaction) => {
 }
 
 export const accountsListEmbed = (interaction, userJson) => {
-    const hideIgn = getSetting(interaction.user.id, "hideIgn");
     const fields = [];
     for(const [i, account] of Object.entries(userJson.accounts)) {
         let fieldValue;
         if(!account.username) fieldValue = s(interaction).info.NO_USERNAME;
-        else if(hideIgn) fieldValue = `*${s(interaction).info.HIDDEN_USERNAME}*`;
         else fieldValue = account.username;
 
         fields.push({

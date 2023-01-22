@@ -1,5 +1,4 @@
 import fs from "fs";
-import {getSetting} from "./settings.js";
 import {Interaction} from "discord.js";
 import {getUser, User} from "../valorant/auth.js";
 import config from "./config.js";
@@ -136,8 +135,6 @@ const resolveDiscordLanguage = (input) => {
         if(user) input = user;
         else discLang = input;
     }
-    if(input instanceof User) discLang = getSetting(input.id, 'locale');
-    if(input instanceof Interaction) discLang = getSetting(input.user.id, 'locale');
 
     if(discLang === "Automatic") {
         if(config.localiseSkinNames) discLang = input.locale;
@@ -146,15 +143,4 @@ const resolveDiscordLanguage = (input) => {
     if(!discLang) discLang = DEFAULT_LANG;
 
     return discLang;
-}
-
-const hideUsername = (args, interactionOrId) => {
-    if(!args.u) return {...args, u: s(interactionOrId).info.NO_USERNAME};
-    if(!interactionOrId) return args;
-
-    const id = typeof interactionOrId === 'string' ? interactionOrId : interactionOrId.user.id;
-    const hide = getSetting(id, 'hideIgn');
-    if(!hide) return args;
-
-    return {...args, u: `||*${s(interactionOrId).info.HIDDEN_USERNAME}*||`};
 }

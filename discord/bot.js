@@ -659,7 +659,7 @@ client.on("interactionCreate", async (interaction) => {
 
                     break;
                 }
-                case "forget": {
+                case "remove": {
                     if(!valorantUser) return await interaction.reply({
                         embeds: [basicEmbed(s(interaction).error.FORGET_FORGOTTEN)],
                         ephemeral: true
