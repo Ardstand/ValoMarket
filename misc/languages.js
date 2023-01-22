@@ -103,7 +103,6 @@ importLanguage(DEFAULT_LANG);
 
 // format a string
 String.prototype.f = function(args, interactionOrId=null) {
-    args = hideUsername(args, interactionOrId);
     let str = this;
     for(let i in args)
         str = str.replace(`{${i}}`, args[i]);
